@@ -1,0 +1,14 @@
+--cpu Cortex-M0
+".\objects\iap.o"
+".\objects\updateinfo.o"
+".\objects\main.o"
+".\objects\system_lpc112x.o"
+".\objects\startup_lpc112x.o"
+".\objects\w25qflash.o"
+".\objects\syscon.o"
+".\objects\gpio.o"
+".\objects\uart.o"
+--library_type=microlib --strict --scatter ".\Objects\BootLoad.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\BootLoad.map" -o .\Objects\BootLoad.axf

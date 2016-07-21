@@ -1,0 +1,109 @@
+Dependencies for Project 'BootLoad', Target 'BootLoad': (DO NOT MODIFY !)
+F (..\Code\App\iap.c)(0x573BC37C)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\Code\App -I..\Code\Driver -I..\Code\Main -I..\Code\NXPLib -I..\Code\NXPLib\CMSIS\lpc112x-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DLPC1125-o .\objects\iap.o --omf_browse .\objects\iap.crf --depend .\objects\iap.d)
+I (..\Code\App\IAP.h)(0x573BC2A7)
+I (..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h)(0x55C2F24E)
+F (..\Code\App\UpdateInfo.c)(0x577C81E3)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\Code\App -I..\Code\Driver -I..\Code\Main -I..\Code\NXPLib -I..\Code\NXPLib\CMSIS\lpc112x-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DLPC1125-o .\objects\updateinfo.o --omf_browse .\objects\updateinfo.crf --depend .\objects\updateinfo.d)
+I (..\Code\App\UpdateInfo.h)(0x577B1809)
+I (..\Code\Driver\W25qFlash.h)(0x573AE840)
+I (..\Code\NXPLib\chip.h)(0x577A5940)
+I (..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Code\NXPLib\gpio.h)(0x55C2F24E)
+I (..\Code\NXPLib\iocon.h)(0x55C2F24D)
+I (..\Code\NXPLib\syscon.h)(0x56E7A509)
+I (..\Code\NXPLib\systick.h)(0x55C2F24E)
+I (..\Code\NXPLib\uart.h)(0x57046AFC)
+I (..\Code\App\iap.h)(0x573BC2A7)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
+F (..\Code\Main\main.c)(0x577A593A)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\Code\App -I..\Code\Driver -I..\Code\Main -I..\Code\NXPLib -I..\Code\NXPLib\CMSIS\lpc112x-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DLPC1125-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\Code\NXPLib\chip.h)(0x577A5940)
+I (..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Code\NXPLib\gpio.h)(0x55C2F24E)
+I (..\Code\NXPLib\iocon.h)(0x55C2F24D)
+I (..\Code\NXPLib\syscon.h)(0x56E7A509)
+I (..\Code\NXPLib\systick.h)(0x55C2F24E)
+I (..\Code\NXPLib\uart.h)(0x57046AFC)
+I (..\Code\App\UpdateInfo.h)(0x577B1809)
+I (..\Code\App\iap.h)(0x573BC2A7)
+F (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.c)(0x55C56B9D)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\Code\App -I..\Code\Driver -I..\Code\Main -I..\Code\NXPLib -I..\Code\NXPLib\CMSIS\lpc112x-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DLPC1125-o .\objects\system_lpc112x.o --omf_browse .\objects\system_lpc112x.crf --depend .\objects\system_lpc112x.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h)(0x55C2F24E)
+F (..\Code\NXPLib\CMSIS\lpc112x\startup_LPC112x.s)(0x577A5A3B)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 513" --pd "LPC1125 SETA 1"--list .\listings\startup_lpc112x.lst --xref -o .\objects\startup_lpc112x.o --depend .\objects\startup_lpc112x.d)
+F (..\Code\Driver\W25qFlash.c)(0x573AE837)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\Code\App -I..\Code\Driver -I..\Code\Main -I..\Code\NXPLib -I..\Code\NXPLib\CMSIS\lpc112x-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DLPC1125-o .\objects\w25qflash.o --omf_browse .\objects\w25qflash.crf --depend .\objects\w25qflash.d)
+I (..\Code\Driver\W25qFlash.h)(0x573AE840)
+I (..\Code\NXPLib\chip.h)(0x577A5940)
+I (..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Code\NXPLib\gpio.h)(0x55C2F24E)
+I (..\Code\NXPLib\iocon.h)(0x55C2F24D)
+I (..\Code\NXPLib\syscon.h)(0x56E7A509)
+I (..\Code\NXPLib\systick.h)(0x55C2F24E)
+I (..\Code\NXPLib\uart.h)(0x57046AFC)
+F (..\Code\NXPLib\syscon.c)(0x570465DF)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\Code\App -I..\Code\Driver -I..\Code\Main -I..\Code\NXPLib -I..\Code\NXPLib\CMSIS\lpc112x-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DLPC1125-o .\objects\syscon.o --omf_browse .\objects\syscon.crf --depend .\objects\syscon.d)
+I (..\Code\NXPLib\chip.h)(0x577A5940)
+I (..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Code\NXPLib\gpio.h)(0x55C2F24E)
+I (..\Code\NXPLib\iocon.h)(0x55C2F24D)
+I (..\Code\NXPLib\syscon.h)(0x56E7A509)
+I (..\Code\NXPLib\systick.h)(0x55C2F24E)
+I (..\Code\NXPLib\uart.h)(0x57046AFC)
+F (..\Code\NXPLib\gpio.c)(0x570E421D)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\Code\App -I..\Code\Driver -I..\Code\Main -I..\Code\NXPLib -I..\Code\NXPLib\CMSIS\lpc112x-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DLPC1125-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+I (..\Code\NXPLib\chip.h)(0x577A5940)
+I (..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Code\NXPLib\gpio.h)(0x55C2F24E)
+I (..\Code\NXPLib\iocon.h)(0x55C2F24D)
+I (..\Code\NXPLib\syscon.h)(0x56E7A509)
+I (..\Code\NXPLib\systick.h)(0x55C2F24E)
+I (..\Code\NXPLib\uart.h)(0x57046AFC)
+F (..\Code\NXPLib\uart.c)(0x57048887)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\Code\App -I..\Code\Driver -I..\Code\Main -I..\Code\NXPLib -I..\Code\NXPLib\CMSIS\lpc112x-I E:\GSDProduct\BootLoad\IDE\RTE-I C:\Keil_v5\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC112x-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DLPC1125-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (..\Code\NXPLib\chip.h)(0x577A5940)
+I (..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h)(0x55C2F24E)
+I (..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h)(0x55C2F24E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
+I (..\Code\NXPLib\gpio.h)(0x55C2F24E)
+I (..\Code\NXPLib\iocon.h)(0x55C2F24D)
+I (..\Code\NXPLib\syscon.h)(0x56E7A509)
+I (..\Code\NXPLib\systick.h)(0x55C2F24E)
+I (..\Code\NXPLib\uart.h)(0x57046AFC)

@@ -1,0 +1,16 @@
+.\objects\syscon.o: ..\Code\NXPLib\syscon.c
+.\objects\syscon.o: ..\Code\NXPLib\chip.h
+.\objects\syscon.o: ..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h
+.\objects\syscon.o: ..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h
+.\objects\syscon.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\syscon.o: ..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h
+.\objects\syscon.o: ..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h
+.\objects\syscon.o: ..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h
+.\objects\syscon.o: ..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h
+.\objects\syscon.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\syscon.o: ..\Code\NXPLib\gpio.h
+.\objects\syscon.o: ..\Code\NXPLib\chip.h
+.\objects\syscon.o: ..\Code\NXPLib\iocon.h
+.\objects\syscon.o: ..\Code\NXPLib\syscon.h
+.\objects\syscon.o: ..\Code\NXPLib\systick.h
+.\objects\syscon.o: ..\Code\NXPLib\uart.h
