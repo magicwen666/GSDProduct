@@ -1,0 +1,46 @@
+#ifndef __WT588D_H__
+#define __WT588D_H__
+
+typedef enum {
+    WT588D_VOLUME_1 = 0xE0,
+    WT588D_VOLUME_2 = 0xE1,
+    WT588D_VOLUME_3 = 0xE2,
+    WT588D_VOLUME_4 = 0xE3,
+    WT588D_VOLUME_5 = 0xE4,
+    WT588D_VOLUME_6 = 0xE5,
+    WT588D_VOLUME_7 = 0xE6,
+    WT588D_VOLUME_8 = 0xE7,
+} WT588DVolume_t;
+
+#define WT588D_LOOP_PLAY    0xF2
+#define WT588D_STOP_PLAY    0xFE
+
+typedef enum {
+    WT588D_CONTEX_NO_ID,
+    WT588D_CONTEX_LINK_WAIT,
+    WT588D_CONTEX_LINK_SUCC,
+    WT588D_CONTEX_LINK_FAIL,
+    WT588D_CONTEX_LOGIN_SUCC,
+    WT588D_CONTEX_RESET_SUCC,
+    WT588D_CONTEX_ASSOC_SET,
+    WT588D_CONTEX_SCENE_SET,
+    WT588D_CONTEX_DIM_GRP_SET,
+    WT588D_CONTEX_CUR_GRP_SET,
+    WT588D_CONTEX_SAVE_SET,
+    WT588D_CONTEX_CANCEL_SET,
+    WT588D_CONTEX_DEL_SET,
+    WT588D_CONTEX_FIRMWARE_UPDATE,
+    WT588D_CONTEX_FIRMWARE_UPDATE_FINISH,
+} WT588DContex_t;
+
+void WT588DInit(void);
+void WT588DSendByte(unsigned char byte);
+void WT588DStartPlay(unsigned char addr);
+void WT588DStopPlay(void);
+void WT588DLoopPlay(void);
+void WT588DAdjustVolume(WT588DVolume_t volume);
+
+#endif
+
+
+
