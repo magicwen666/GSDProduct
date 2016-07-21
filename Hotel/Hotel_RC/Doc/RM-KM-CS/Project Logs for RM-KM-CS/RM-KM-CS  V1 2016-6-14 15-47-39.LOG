@@ -1,0 +1,57 @@
+Removed Pin From Net: NetName=GND Pin=Q1-2
+Removed Pin From Net: NetName=GND Pin=Q2-2
+Removed Pin From Net: NetName=GND Pin=Q3-2
+Removed Pin From Net: NetName=GND Pin=Q4-2
+Removed Pin From Net: NetName=RL1 Pin=R3-2
+Removed Pin From Net: NetName=RL2 Pin=R4-2
+Removed Pin From Net: NetName=RL3 Pin=R5-2
+Removed Pin From Net: NetName=RL4 Pin=R6-2
+Removed Member From Class: ClassName=RM-KM-CS Member=Q1
+Removed Member From Class: ClassName=RM-KM-CS Member=Q2
+Removed Member From Class: ClassName=RM-KM-CS Member=Q3
+Removed Member From Class: ClassName=RM-KM-CS Member=Q4
+Removed Member From Class: ClassName=RM-KM-CS Member=R3
+Removed Member From Class: ClassName=RM-KM-CS Member=R4
+Removed Member From Class: ClassName=RM-KM-CS Member=R5
+Removed Member From Class: ClassName=RM-KM-CS Member=R6
+Added Component: Designator=RP1(RP_4P_0603_SMD)
+Added Component: Designator=U3(SOIC16)
+Added Pin To Net: NetName=RL1 Pin=RP1-1
+Added Pin To Net: NetName=RL2 Pin=RP1-3
+Added Pin To Net: NetName=RL3 Pin=RP1-5
+Added Pin To Net: NetName=RL4 Pin=RP1-7
+Added Pin To Net: NetName=GND Pin=U3-5
+Added Pin To Net: NetName=GND Pin=U3-6
+Added Pin To Net: NetName=GND Pin=U3-7
+Added Pin To Net: NetName=GND Pin=U3-8
+Added Pin To Net: NetName=+12V Pin=U3-9
+Added Pin To Net: NetName=NetRP1_2 Pin=RP1-2
+Added Pin To Net: NetName=NetRP1_2 Pin=U3-1
+Added Net: Name=NetRP1_2
+Added Pin To Net: NetName=NetRP1_4 Pin=RP1-4
+Added Pin To Net: NetName=NetRP1_4 Pin=U3-2
+Added Net: Name=NetRP1_4
+Added Pin To Net: NetName=NetRP1_6 Pin=RP1-6
+Added Pin To Net: NetName=NetRP1_6 Pin=U3-3
+Added Net: Name=NetRP1_6
+Added Pin To Net: NetName=NetRP1_8 Pin=RP1-8
+Added Pin To Net: NetName=NetRP1_8 Pin=U3-4
+Added Net: Name=NetRP1_8
+Added Pin To Net: NetName=RL1_OUT Pin=D3-A
+Added Pin To Net: NetName=RL1_OUT Pin=RY1-5
+Added Pin To Net: NetName=RL1_OUT Pin=U3-16
+Added Net: Name=RL1_OUT
+Added Pin To Net: NetName=RL2_OUT Pin=D4-A
+Added Pin To Net: NetName=RL2_OUT Pin=RY2-5
+Added Pin To Net: NetName=RL2_OUT Pin=U3-15
+Added Net: Name=RL2_OUT
+Added Pin To Net: NetName=RL3_OUT Pin=D5-A
+Added Pin To Net: NetName=RL3_OUT Pin=RY3-5
+Added Pin To Net: NetName=RL3_OUT Pin=U3-14
+Added Net: Name=RL3_OUT
+Added Pin To Net: NetName=RL4_OUT Pin=D6-A
+Added Pin To Net: NetName=RL4_OUT Pin=RY4-5
+Added Pin To Net: NetName=RL4_OUT Pin=U3-13
+Added Net: Name=RL4_OUT
+Added Member To Class: ClassName=RM-KM-CS Member=Component RP1 1K
+Added Member To Class: ClassName=RM-KM-CS Member=Component U3 ULN2003

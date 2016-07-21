@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=NetC7_1 Pin=C7-1
+Removed Pin From Net: NetName=+12V Pin=C7-2
+Removed Pin From Net: NetName=NetC8_1 Pin=C8-1
+Removed Pin From Net: NetName=+12V Pin=C8-2
+Removed Pin From Net: NetName=NetC9_1 Pin=C9-1
+Removed Pin From Net: NetName=+12V Pin=C9-2
+Removed Pin From Net: NetName=NetC10_1 Pin=C10-1
+Removed Pin From Net: NetName=+12V Pin=C10-2
+Removed Member From Class: ClassName=RM-KM-CS Member=C7
+Removed Member From Class: ClassName=RM-KM-CS Member=C8
+Removed Member From Class: ClassName=RM-KM-CS Member=C9
+Removed Member From Class: ClassName=RM-KM-CS Member=C10
+Change Net Name : Old Net Name=NetC7_1 New Net Name=NetD3_A
+Change Net Name : Old Net Name=NetC8_1 New Net Name=NetD4_A
+Change Net Name : Old Net Name=NetC9_1 New Net Name=NetD5_A
+Change Net Name : Old Net Name=NetC10_1 New Net Name=NetD6_A

@@ -1,0 +1,19 @@
+Change Component Comment : Designator=U2 Old Comment=ASM1117-5 New Comment=AMS1117-5
+Change Component Comment : Designator=RY1 Old Comment=DC12V New Comment=HK4100F-DC12V-SHG
+Change Component Comment : Designator=RY2 Old Comment=DC12V New Comment=HK4100F-DC12V-SHG
+Change Component Comment : Designator=RY3 Old Comment=DC12V New Comment=HK4100F-DC12V-SHG
+Change Component Comment : Designator=RY4 Old Comment=DC12V New Comment=HK4100F-DC12V-SHG
+Added Component: Designator=C1(CAP-DIP4*7)
+Added Component: Designator=C6(CAP-DIP4*7)
+Added Component: Designator=U1(EL357)
+Added Pin To Net: NetName=+12V Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=+5V Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=IN Pin=U1-1
+Added Pin To Net: NetName=NetR1_2 Pin=U1-2
+Added Pin To Net: NetName=IN_SIG Pin=U1-3
+Added Pin To Net: NetName=+5V Pin=U1-4
+Added Member To Class: ClassName=RM-KM-CS Member=Component C1 100uf/16v
+Added Member To Class: ClassName=RM-KM-CS Member=Component C6 100uf/16v
+Added Member To Class: ClassName=RM-KM-CS Member=Component U1 EL357

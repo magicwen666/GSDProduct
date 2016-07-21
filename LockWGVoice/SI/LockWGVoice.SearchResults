@@ -1,0 +1,2 @@
+---- waitEndCnt Matches (1 in 1 files) ----
+Wifi.c (e:\gsdproduct\lockwgvoice\code\driver):static volatile unsigned char waitEndCnt = 0;

@@ -1,0 +1,11 @@
+---- SysInfoIsMaster Matches (10 in 3 files) ----
+Scr_key.c (e:\gsdproduct\hotel\hotel_rc\code\app):            if (1 == SysInfoIsMaster()) {
+Scr_key.c (e:\gsdproduct\hotel\hotel_rc\code\app):            if (1 == SysInfoIsMaster()) {
+Sys.c (e:\gsdproduct\hotel\hotel_rc\code\app):unsigned char SysInfoIsMaster(void) {
+Sys.c (e:\gsdproduct\hotel\hotel_rc\code\app):    if (1 == SysInfoIsMaster()) {
+Sys.c (e:\gsdproduct\hotel\hotel_rc\code\app):                //if (1 == SysInfoIsMaster()) {
+Sys.c (e:\gsdproduct\hotel\hotel_rc\code\app):                //if (1 == SysInfoIsMaster()) {
+Sys.c (e:\gsdproduct\hotel\hotel_rc\code\app):            if (1 == SysInfoIsMaster()) {
+Sys.c (e:\gsdproduct\hotel\hotel_rc\code\app):            //if (0 == SysInfoIsMaster()) {
+Sys.c (e:\gsdproduct\hotel\hotel_rc\code\app):            //if (0 == SysInfoIsMaster()) {
+Sys.h (e:\gsdproduct\hotel\hotel_rc\code\app):unsigned char SysInfoIsMaster(void);

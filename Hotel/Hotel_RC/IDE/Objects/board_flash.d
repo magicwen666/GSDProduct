@@ -1,0 +1,9 @@
+.\objects\board_flash.o: ..\Code\Driver\board_flash.c
+.\objects\board_flash.o: ..\Code\NXPLib\IAP.h
+.\objects\board_flash.o: ..\Code\NXPLib\CMSIS\lpc112x\LPC112x.h
+.\objects\board_flash.o: ..\Code\NXPLib\CMSIS\lpc112x\core_cm0.h
+.\objects\board_flash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\board_flash.o: ..\Code\NXPLib\CMSIS\lpc112x\core_cmInstr.h
+.\objects\board_flash.o: ..\Code\NXPLib\CMSIS\lpc112x\core_cmFunc.h
+.\objects\board_flash.o: ..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.h
+.\objects\board_flash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

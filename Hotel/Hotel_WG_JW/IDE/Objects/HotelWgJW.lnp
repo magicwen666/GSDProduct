@@ -1,0 +1,28 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\system_lpc112x.o"
+".\objects\startup_lpc112x.o"
+".\objects\delay.o"
+".\objects\shell.o"
+".\objects\systimer.o"
+".\objects\sysinfo.o"
+".\objects\jwlock.o"
+".\objects\frame.o"
+".\objects\keymgr.o"
+".\objects\updateinfo.o"
+".\objects\beep.o"
+".\objects\bles02.o"
+".\objects\key.o"
+".\objects\w25qflash.o"
+".\objects\rs485.o"
+".\objects\uart.o"
+".\objects\timer.o"
+".\objects\systick.o"
+".\objects\syscon.o"
+".\objects\gpio.o"
+".\objects\iocon.o"
+".\objects\wdt.o"
+--library_type=microlib --strict --scatter ".\Objects\HotelWgJW.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\HotelWgJW.map" -o .\Objects\HotelWgJW.axf

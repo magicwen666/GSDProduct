@@ -1,0 +1,1705 @@
+Component: ARM Compiler 5.05 update 1 (build 106) Tool: armlink [4d0efa]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.DriverInit) refers to board_time.o(i.board_time_init) for board_time_init
+    main.o(i.DriverInit) refers to board_key.o(i.board_key_init) for board_key_init
+    main.o(i.DriverInit) refers to board_led.o(i.board_led_init) for board_led_init
+    main.o(i.DriverInit) refers to board_rs485.o(i.board_rs485_init) for board_rs485_init
+    main.o(i.DriverInit) refers to board_ir.o(i.board_ir_init) for board_ir_init
+    main.o(i.DriverInit) refers to board_ir.o(i.board_irps_init) for board_irps_init
+    main.o(i.DriverInit) refers to board_light.o(i.board_light_init) for board_light_init
+    main.o(i.DriverInit) refers to door.o(i.DoorInit) for DoorInit
+    main.o(i.DriverInit) refers to board_wdt.o(i.board_wdt_init) for board_wdt_init
+    main.o(i.fputc) refers to uart.o(i.uart2_send_byte) for uart2_send_byte
+    main.o(i.main) refers to main.o(i.DriverInit) for DriverInit
+    main.o(i.main) refers to sys.o(i.SysInfoInit) for SysInfoInit
+    main.o(i.main) refers to network.o(i.NetworkInit) for NetworkInit
+    main.o(i.main) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    main.o(i.main) refers to sys.o(i.KeyTask) for KeyTask
+    main.o(i.main) refers to sys.o(i.IrTask) for IrTask
+    main.o(i.main) refers to sys.o(i.PsTask) for PsTask
+    main.o(i.main) refers to sys.o(i.NetWorkTask) for NetWorkTask
+    main.o(i.main) refers to sys.o(i.WaitTask) for WaitTask
+    main.o(i.main) refers to sys.o(i.DoorTask) for DoorTask
+    system_lpc112x.o(i.SystemCoreClockUpdate) refers to system_lpc112x.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    system_lpc112x.o(i.SystemCoreClockUpdate) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_lpc112x.o(i.SystemCoreClockUpdate) refers to system_lpc112x.o(.data) for SystemCoreClock
+    startup_lpc112x.o(RESET) refers to startup_lpc112x.o(STACK) for __initial_sp
+    startup_lpc112x.o(RESET) refers to startup_lpc112x.o(.text) for Reset_Handler
+    startup_lpc112x.o(RESET) refers to interrupt.o(i.SysTick_Handler) for SysTick_Handler
+    startup_lpc112x.o(RESET) refers to i2cint.o(i.I2C_IRQHandler) for I2C_IRQHandler
+    startup_lpc112x.o(RESET) refers to interrupt.o(i.CT16B0_IRQHandler) for CT16B0_IRQHandler
+    startup_lpc112x.o(RESET) refers to interrupt.o(i.CT16B1_IRQHandler) for CT16B1_IRQHandler
+    startup_lpc112x.o(RESET) refers to interrupt.o(i.UART0_IRQHandler) for UART0_IRQHandler
+    startup_lpc112x.o(RESET) refers to interrupt.o(i.GPIO0_IRQHandler) for GPIO0_IRQHandler
+    startup_lpc112x.o(.text) refers to system_lpc112x.o(i.SystemInit) for SystemInit
+    startup_lpc112x.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    network.o(i.NetworkInit) refers to network.o(.data) for net_frame_tx
+    network.o(i.NetworkRecv) refers to board_rs485.o(i.board_rs485_read) for board_rs485_read
+    network.o(i.NetworkRecv) refers to memcpya.o(.text) for __aeabi_memcpy
+    network.o(i.NetworkRecv) refers to network.o(.data) for net_frame_rx
+    network.o(i.NetworkSend) refers to board_rs485.o(i.board_rs485_write_nbyte) for board_rs485_write_nbyte
+    network.o(i.NetworkSend) refers to network.o(.data) for net_frame_tx
+    interrupt.o(i.CT16B1_IRQHandler) refers to board_ir.o(i.handler_ir_tick) for handler_ir_tick
+    interrupt.o(i.CT16B1_IRQHandler) refers to board_ir.o(i.handler_irps_send) for handler_irps_send
+    interrupt.o(i.GPIO0_IRQHandler) refers to board_ir.o(i.handler_ir) for handler_ir
+    interrupt.o(i.SysTick_Handler) refers to board_time.o(i.handler_systick) for handler_systick
+    interrupt.o(i.SysTick_Handler) refers to board_key.o(i.handler_key_scan) for handler_key_scan
+    interrupt.o(i.SysTick_Handler) refers to board_led.o(i.handler_flash_led) for handler_flash_led
+    interrupt.o(i.SysTick_Handler) refers to board_led.o(i.handler_rotate_led) for handler_rotate_led
+    interrupt.o(i.SysTick_Handler) refers to ps.o(i.PsHandler) for PsHandler
+    interrupt.o(i.SysTick_Handler) refers to board_rs485.o(i.handler_rs485_idle) for handler_rs485_idle
+    interrupt.o(i.SysTick_Handler) refers to scr_key.o(i.WaitDelayHandler) for WaitDelayHandler
+    interrupt.o(i.SysTick_Handler) refers to door.o(i.DoorHander) for DoorHander
+    interrupt.o(i.UART0_IRQHandler) refers to board_rs485.o(i.handler_rs485) for handler_rs485
+    sys.o(i.AssocMainkeyCreate) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.AssocSet) refers to board_led.o(i.board_led_flash_start) for board_led_flash_start
+    sys.o(i.AssocSet) refers to board_key.o(i.board_key_free_wait) for board_key_free_wait
+    sys.o(i.AssocSet) refers to board_time.o(i.board_time_out_set) for board_time_out_set
+    sys.o(i.AssocSet) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    sys.o(i.AssocSet) refers to board_time.o(i.board_time_out_wait) for board_time_out_wait
+    sys.o(i.AssocSet) refers to board_led.o(i.board_led_flash_stop) for board_led_flash_stop
+    sys.o(i.AssocSet) refers to board_key.o(i.board_key_scan) for board_key_scan
+    sys.o(i.AssocSet) refers to scr_key.o(i.ScrKeyStateSwitch) for ScrKeyStateSwitch
+    sys.o(i.AssocSet) refers to scr_key.o(i.ScrKeyHaveOpen) for ScrKeyHaveOpen
+    sys.o(i.AssocSet) refers to scr_key.o(i.ScrKeyStateOpen) for ScrKeyStateOpen
+    sys.o(i.AssocSet) refers to network.o(i.NetworkSend) for NetworkSend
+    sys.o(i.AssocSet) refers to scr_key.o(i.ScrKeyStateNone) for ScrKeyStateNone
+    sys.o(i.AssocSet) refers to network.o(i.NetworkRecv) for NetworkRecv
+    sys.o(i.AssocSet) refers to sys.o(i.NetWorkAssocRun) for NetWorkAssocRun
+    sys.o(i.AssocSet) refers to board_led.o(i.board_led_flash_add) for board_led_flash_add
+    sys.o(i.AssocSet) refers to sys.o(i.WaitNetQuit) for WaitNetQuit
+    sys.o(i.AssocSet) refers to sys.o(i.WaitIrQuit) for WaitIrQuit
+    sys.o(i.AssocSet) refers to system_lpc112x.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    sys.o(i.AssocSet) refers to sys.o(i.AssocStoreSave) for AssocStoreSave
+    sys.o(i.AssocSet) refers to sys.o(i.AssocStoreDel) for AssocStoreDel
+    sys.o(i.AssocSet) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.AssocStoreDel) refers to scr_key.o(i.ScrKeyAssocBackup) for ScrKeyAssocBackup
+    sys.o(i.AssocStoreDel) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.AssocStoreSave) refers to scr_key.o(i.ScrKeyAssocBackup) for ScrKeyAssocBackup
+    sys.o(i.AssocStoreSave) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.DoorTask) refers to door.o(i.DoorIsCanCheck) for DoorIsCanCheck
+    sys.o(i.DoorTask) refers to door.o(i.DoorGetSta) for DoorGetSta
+    sys.o(i.DoorTask) refers to sys.o(i.SysInfoIsMaster) for SysInfoIsMaster
+    sys.o(i.DoorTask) refers to door.o(i.DoorOpenFeedback) for DoorOpenFeedback
+    sys.o(i.DoorTask) refers to door.o(i.DoorCloseFeedback) for DoorCloseFeedback
+    sys.o(i.IrTask) refers to board_ir.o(i.board_ir_get) for board_ir_get
+    sys.o(i.IrTask) refers to ps.o(i.PsWake) for PsWake
+    sys.o(i.IrTask) refers to conf_key.o(i.ConfKeyInit) for ConfKeyInit
+    sys.o(i.IrTask) refers to board_led.o(i.board_led_rotate_start) for board_led_rotate_start
+    sys.o(i.IrTask) refers to sys.o(i.set_entry_clear) for set_entry_clear
+    sys.o(i.IrTask) refers to board_time.o(i.board_time_out_set) for board_time_out_set
+    sys.o(i.IrTask) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    sys.o(i.IrTask) refers to board_time.o(i.board_time_out_wait) for board_time_out_wait
+    sys.o(i.IrTask) refers to board_led.o(i.board_led_rotate_stop) for board_led_rotate_stop
+    sys.o(i.IrTask) refers to sys.o(i.set_quit_clear) for set_quit_clear
+    sys.o(i.IrTask) refers to board_key.o(i.board_key_scan) for board_key_scan
+    sys.o(i.IrTask) refers to conf_key.o(i.ConfKeyStateSwitch) for ConfKeyStateSwitch
+    sys.o(i.IrTask) refers to sys.o(i.ScrBitSet) for ScrBitSet
+    sys.o(i.IrTask) refers to network.o(i.NetworkSend) for NetworkSend
+    sys.o(i.IrTask) refers to sys.o(i.AssocSet) for AssocSet
+    sys.o(i.IrTask) refers to sys.o(i.MasterSet) for MasterSet
+    sys.o(i.IrTask) refers to sys.o(i.KeyColorSet) for KeyColorSet
+    sys.o(i.IrTask) refers to sys.o(i.LEDCheck) for LEDCheck
+    sys.o(i.IrTask) refers to network.o(i.NetworkRecv) for NetworkRecv
+    sys.o(i.IrTask) refers to conf_key.o(.bss) for conf_key
+    sys.o(i.KeyColorSet) refers to board_key.o(i.board_key_free_wait) for board_key_free_wait
+    sys.o(i.KeyColorSet) refers to board_time.o(i.board_time_out_set) for board_time_out_set
+    sys.o(i.KeyColorSet) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    sys.o(i.KeyColorSet) refers to board_time.o(i.board_time_out_wait) for board_time_out_wait
+    sys.o(i.KeyColorSet) refers to keycolor.o(i.KeyColorInit) for KeyColorInit
+    sys.o(i.KeyColorSet) refers to board_led.o(i.board_led_close) for board_led_close
+    sys.o(i.KeyColorSet) refers to board_key.o(i.board_key_scan) for board_key_scan
+    sys.o(i.KeyColorSet) refers to conf_key.o(i.ConfKeyStateSwitch) for ConfKeyStateSwitch
+    sys.o(i.KeyColorSet) refers to idiv.o(.text) for __aeabi_idivmod
+    sys.o(i.KeyColorSet) refers to memcpya.o(.text) for __aeabi_memcpy
+    sys.o(i.KeyColorSet) refers to board_led.o(i.board_led_backlight_set) for board_led_backlight_set
+    sys.o(i.KeyColorSet) refers to board_led.o(i.board_led_forelight_set) for board_led_forelight_set
+    sys.o(i.KeyColorSet) refers to board_led.o(i.board_led_open) for board_led_open
+    sys.o(i.KeyColorSet) refers to board_ir.o(i.board_ir_get) for board_ir_get
+    sys.o(i.KeyColorSet) refers to sys.o(i.SysInfoColorSave) for SysInfoColorSave
+    sys.o(i.KeyColorSet) refers to sys.o(.data) for g_sys_info
+    sys.o(i.KeyColorSet) refers to conf_key.o(.bss) for conf_key
+    sys.o(i.KeyColorSet) refers to keycolor.o(.data) for fore_color
+    sys.o(i.KeyTask) refers to board_key.o(i.board_key_scan) for board_key_scan
+    sys.o(i.KeyTask) refers to ps.o(i.PsWake) for PsWake
+    sys.o(i.KeyTask) refers to scr_key.o(i.ScrKeyStateSwitch) for ScrKeyStateSwitch
+    sys.o(i.KeyTask) refers to scr_key.o(i.ScrKeyProcess) for ScrKeyProcess
+    sys.o(i.KeyTask) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.LEDCheck) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    sys.o(i.LEDCheck) refers to board_led.o(i.board_led_display) for board_led_display
+    sys.o(i.LEDCheck) refers to delay.o(i.delay_ms) for delay_ms
+    sys.o(i.LEDCheck) refers to board_ir.o(i.board_ir_get) for board_ir_get
+    sys.o(i.LEDCheck) refers to board_led.o(i.board_led_close) for board_led_close
+    sys.o(i.LEDCheck) refers to sys.o(.data) for RedColor
+    sys.o(i.MasterSet) refers to board_led.o(i.board_led_flash_start) for board_led_flash_start
+    sys.o(i.MasterSet) refers to board_key.o(i.board_key_free_wait) for board_key_free_wait
+    sys.o(i.MasterSet) refers to board_time.o(i.board_time_out_set) for board_time_out_set
+    sys.o(i.MasterSet) refers to board_led.o(i.board_led_flash_del) for board_led_flash_del
+    sys.o(i.MasterSet) refers to board_led.o(i.board_led_close) for board_led_close
+    sys.o(i.MasterSet) refers to sys.o(i.SysInfoIsMaster) for SysInfoIsMaster
+    sys.o(i.MasterSet) refers to board_led.o(i.board_led_open) for board_led_open
+    sys.o(i.MasterSet) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    sys.o(i.MasterSet) refers to board_time.o(i.board_time_out_wait) for board_time_out_wait
+    sys.o(i.MasterSet) refers to board_led.o(i.board_led_flash_stop) for board_led_flash_stop
+    sys.o(i.MasterSet) refers to board_key.o(i.board_key_scan) for board_key_scan
+    sys.o(i.MasterSet) refers to conf_key.o(i.ConfKeyStateSwitch) for ConfKeyStateSwitch
+    sys.o(i.MasterSet) refers to board_led.o(i.board_led_flash_add) for board_led_flash_add
+    sys.o(i.MasterSet) refers to board_ir.o(i.board_ir_get) for board_ir_get
+    sys.o(i.MasterSet) refers to sys.o(i.SysInfoSetMaster) for SysInfoSetMaster
+    sys.o(i.MasterSet) refers to conf_key.o(.bss) for conf_key
+    sys.o(i.NetWorkAssocRun) refers to scr_key.o(i.ScrKeyStateOpen) for ScrKeyStateOpen
+    sys.o(i.NetWorkAssocRun) refers to sys.o(i.SysInfoIsMaster) for SysInfoIsMaster
+    sys.o(i.NetWorkAssocRun) refers to network.o(i.NetworkSend) for NetworkSend
+    sys.o(i.NetWorkAssocRun) refers to scr_key.o(i.ScrKeyStateClose) for ScrKeyStateClose
+    sys.o(i.NetWorkAssocRun) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.NetWorkLoadRun) refers to scr_key.o(i.ScrKeyStateOpen) for ScrKeyStateOpen
+    sys.o(i.NetWorkLoadRun) refers to network.o(i.NetworkSend) for NetworkSend
+    sys.o(i.NetWorkLoadRun) refers to scr_key.o(i.ScrKeyStateClose) for ScrKeyStateClose
+    sys.o(i.NetWorkLoadRun) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.NetWorkTask) refers to network.o(i.NetworkRecv) for NetworkRecv
+    sys.o(i.NetWorkTask) refers to system_lpc112x.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    sys.o(i.NetWorkTask) refers to sys.o(i.SysInfoIsMaster) for SysInfoIsMaster
+    sys.o(i.NetWorkTask) refers to ps.o(i.PsWake) for PsWake
+    sys.o(i.NetWorkTask) refers to sys.o(i.NetWorkLoadRun) for NetWorkLoadRun
+    sys.o(i.NetWorkTask) refers to sys.o(i.NetWorkAssocRun) for NetWorkAssocRun
+    sys.o(i.NetWorkTask) refers to sys.o(i.set_entry_clear) for set_entry_clear
+    sys.o(i.NetWorkTask) refers to sys.o(i.AssocSet) for AssocSet
+    sys.o(i.NetWorkTask) refers to sys.o(i.set_quit_clear) for set_quit_clear
+    sys.o(i.PsTask) refers to board_ir.o(i.board_irps_get) for board_irps_get
+    sys.o(i.PsTask) refers to ps.o(i.PsWake) for PsWake
+    sys.o(i.PsTask) refers to ps.o(i.PsSleep) for PsSleep
+    sys.o(i.PsTask) refers to ps.o(.data) for g_ps
+    sys.o(i.ScrBitSet) refers to board_led.o(i.board_led_flash_start) for board_led_flash_start
+    sys.o(i.ScrBitSet) refers to board_key.o(i.board_key_free_wait) for board_key_free_wait
+    sys.o(i.ScrBitSet) refers to board_time.o(i.board_time_out_set) for board_time_out_set
+    sys.o(i.ScrBitSet) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    sys.o(i.ScrBitSet) refers to board_time.o(i.board_time_out_wait) for board_time_out_wait
+    sys.o(i.ScrBitSet) refers to board_led.o(i.board_led_flash_stop) for board_led_flash_stop
+    sys.o(i.ScrBitSet) refers to board_ir.o(i.board_ir_get) for board_ir_get
+    sys.o(i.ScrBitSet) refers to board_led.o(i.board_led_flash_del) for board_led_flash_del
+    sys.o(i.ScrBitSet) refers to board_led.o(i.board_led_open) for board_led_open
+    sys.o(i.ScrBitSet) refers to sys.o(i.SysInfoScrBitSave) for SysInfoScrBitSave
+    sys.o(i.ScrBitSet) refers to memcpya.o(.text) for __aeabi_memcpy
+    sys.o(i.ScrBitSet) refers to scr_key.o(i.ScrKeyInit) for ScrKeyInit
+    sys.o(i.ScrBitSet) refers to keycolor.o(i.KeyColorInit) for KeyColorInit
+    sys.o(i.ScrBitSet) refers to board_led.o(i.board_led_close) for board_led_close
+    sys.o(i.ScrBitSet) refers to sys.o(.data) for g_sys_info
+    sys.o(i.SysInfoColorGet) refers to sys.o(.data) for g_sys_info
+    sys.o(i.SysInfoColorSave) refers to board_flash.o(i.FlashWriteData) for FlashWriteData
+    sys.o(i.SysInfoColorSave) refers to sys.o(.data) for g_sys_info
+    sys.o(i.SysInfoDefault) refers to sys.o(.data) for g_sys_info
+    sys.o(i.SysInfoInit) refers to board_flash.o(i.FlashReadData) for FlashReadData
+    sys.o(i.SysInfoInit) refers to sys.o(i.SysInfoDefault) for SysInfoDefault
+    sys.o(i.SysInfoInit) refers to board_flash.o(i.FlashWriteData) for FlashWriteData
+    sys.o(i.SysInfoInit) refers to memcpya.o(.text) for __aeabi_memcpy
+    sys.o(i.SysInfoInit) refers to scr_key.o(i.ScrKeyInit) for ScrKeyInit
+    sys.o(i.SysInfoInit) refers to keycolor.o(i.KeyColorInit) for KeyColorInit
+    sys.o(i.SysInfoInit) refers to board_led.o(i.board_led_close) for board_led_close
+    sys.o(i.SysInfoInit) refers to ps.o(i.PsInit) for PsInit
+    sys.o(i.SysInfoInit) refers to scr_key.o(i.ScrKeyResum) for ScrKeyResum
+    sys.o(i.SysInfoInit) refers to sys.o(.data) for g_sys_info
+    sys.o(i.SysInfoIsMaster) refers to sys.o(.data) for g_sys_info
+    sys.o(i.SysInfoScrBitSave) refers to board_flash.o(i.FlashWriteData) for FlashWriteData
+    sys.o(i.SysInfoScrBitSave) refers to scr_key.o(i.ScrKeyAssocClear) for ScrKeyAssocClear
+    sys.o(i.SysInfoScrBitSave) refers to sys.o(.data) for g_sys_info
+    sys.o(i.SysInfoSetMaster) refers to board_flash.o(i.FlashWriteData) for FlashWriteData
+    sys.o(i.SysInfoSetMaster) refers to sys.o(.data) for g_sys_info
+    sys.o(i.WaitIrQuit) refers to board_ir.o(i.board_ir_get) for board_ir_get
+    sys.o(i.WaitIrQuit) refers to board_led.o(i.board_led_flash_del) for board_led_flash_del
+    sys.o(i.WaitIrQuit) refers to board_led.o(i.board_led_close) for board_led_close
+    sys.o(i.WaitIrQuit) refers to board_led.o(i.board_led_flash_add) for board_led_flash_add
+    sys.o(i.WaitIrQuit) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    sys.o(i.WaitIrQuit) refers to board_time.o(i.board_time_out_wait) for board_time_out_wait
+    sys.o(i.WaitIrQuit) refers to network.o(i.NetworkSend) for NetworkSend
+    sys.o(i.WaitIrQuit) refers to board_key.o(i.board_key_scan) for board_key_scan
+    sys.o(i.WaitIrQuit) refers to conf_key.o(i.ConfKeyStateSwitch) for ConfKeyStateSwitch
+    sys.o(i.WaitIrQuit) refers to sys.o(i.AssocMainkeyCreate) for AssocMainkeyCreate
+    sys.o(i.WaitIrQuit) refers to network.o(i.NetworkRecv) for NetworkRecv
+    sys.o(i.WaitIrQuit) refers to sys.o(i.WaitNetQuit) for WaitNetQuit
+    sys.o(i.WaitIrQuit) refers to conf_key.o(.bss) for conf_key
+    sys.o(i.WaitTask) refers to scr_key.o(i.ScrKeyStateClose) for ScrKeyStateClose
+    sys.o(i.WaitTask) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.WaitTask) refers to scr_key.o(.data) for WaitDelayTick
+    sys.o(i.set_entry_clear) refers to board_light.o(i.board_light_close) for board_light_close
+    sys.o(i.set_entry_clear) refers to board_ir.o(i.board_ir_clean) for board_ir_clean
+    sys.o(i.set_entry_clear) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.set_entry_clear) refers to conf_key.o(.bss) for conf_key
+    sys.o(i.set_quit_clear) refers to board_light.o(i.board_light_close) for board_light_close
+    sys.o(i.set_quit_clear) refers to board_ir.o(i.board_ir_clean) for board_ir_clean
+    sys.o(i.set_quit_clear) refers to board_key.o(i.board_key_free_wait) for board_key_free_wait
+    sys.o(i.set_quit_clear) refers to scr_key.o(.bss) for g_scr_key
+    sys.o(i.set_quit_clear) refers to conf_key.o(.bss) for conf_key
+    keycolor.o(i.KeyColorInit) refers to memcpya.o(.text) for __aeabi_memcpy
+    keycolor.o(i.KeyColorInit) refers to board_led.o(i.board_led_forelight_set) for board_led_forelight_set
+    keycolor.o(i.KeyColorInit) refers to board_led.o(i.board_led_backlight_set) for board_led_backlight_set
+    keycolor.o(i.KeyColorInit) refers to scr_key.o(.bss) for g_scr_key
+    keycolor.o(i.KeyColorInit) refers to keycolor.o(.data) for fore_color
+    scr_key.o(i.AssocRun) refers to network.o(i.NetworkSend) for NetworkSend
+    scr_key.o(i.ScrKeyAssocBackup) refers to board_flash.o(i.FlashWriteData) for FlashWriteData
+    scr_key.o(i.ScrKeyAssocBackup) refers to scr_key.o(.bss) for g_scr_key
+    scr_key.o(i.ScrKeyAssocClear) refers to board_flash.o(i.FlashWriteData) for FlashWriteData
+    scr_key.o(i.ScrKeyAssocResum) refers to board_flash.o(i.FlashReadData) for FlashReadData
+    scr_key.o(i.ScrKeyAssocResum) refers to scr_key.o(.bss) for g_scr_key
+    scr_key.o(i.ScrKeyClear) refers to board_key.o(i.okey_clear) for okey_clear
+    scr_key.o(i.ScrKeyClear) refers to scr_key.o(.bss) for g_scr_key
+    scr_key.o(i.ScrKeyHaveOpen) refers to scr_key.o(.bss) for g_scr_key
+    scr_key.o(i.ScrKeyInit) refers to scr_key.o(i.ScrKeyClear) for ScrKeyClear
+    scr_key.o(i.ScrKeyInit) refers to system_lpc112x.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    scr_key.o(i.ScrKeyInit) refers to board_light.o(i.board_light_register) for board_light_register
+    scr_key.o(i.ScrKeyInit) refers to scr_key.o(.bss) for g_scr_key
+    scr_key.o(i.ScrKeyMutexAll) refers to scr_key.o(i.ScrKeyStateClose) for ScrKeyStateClose
+    scr_key.o(i.ScrKeyMutexAll) refers to scr_key.o(.bss) for g_scr_key
+    scr_key.o(i.ScrKeyMutexOther) refers to scr_key.o(i.ScrKeyStateClose) for ScrKeyStateClose
+    scr_key.o(i.ScrKeyMutexOther) refers to network.o(i.NetworkSend) for NetworkSend
+    scr_key.o(i.ScrKeyMutexOther) refers to scr_key.o(.bss) for g_scr_key
+    scr_key.o(i.ScrKeyProcess) refers to scr_key.o(i.ScrKeyStateOpen) for ScrKeyStateOpen
+    scr_key.o(i.ScrKeyProcess) refers to sys.o(i.SysInfoIsMaster) for SysInfoIsMaster
+    scr_key.o(i.ScrKeyProcess) refers to network.o(i.NetworkSend) for NetworkSend
+    scr_key.o(i.ScrKeyProcess) refers to scr_key.o(i.AssocRun) for AssocRun
+    scr_key.o(i.ScrKeyProcess) refers to scr_key.o(i.ScrKeyStateClose) for ScrKeyStateClose
+    scr_key.o(i.ScrKeyResum) refers to scr_key.o(i.ScrKeyAssocResum) for ScrKeyAssocResum
+    scr_key.o(i.ScrKeyResum) refers to scr_key.o(.bss) for g_scr_key
+    scr_key.o(i.ScrKeyStateClose) refers to board_light.o(i.board_light_close) for board_light_close
+    scr_key.o(i.ScrKeyStateClose) refers to board_led.o(i.board_led_flash_del) for board_led_flash_del
+    scr_key.o(i.ScrKeyStateClose) refers to board_led.o(i.board_led_close) for board_led_close
+    scr_key.o(i.ScrKeyStateNone) refers to board_light.o(i.board_light_close) for board_light_close
+    scr_key.o(i.ScrKeyStateNone) refers to board_led.o(i.board_led_flash_add) for board_led_flash_add
+    scr_key.o(i.ScrKeyStateOpen) refers to scr_key.o(i.ScrKeyMutexOther) for ScrKeyMutexOther
+    scr_key.o(i.ScrKeyStateOpen) refers to board_light.o(i.board_light_open) for board_light_open
+    scr_key.o(i.ScrKeyStateOpen) refers to board_led.o(i.board_led_flash_del) for board_led_flash_del
+    scr_key.o(i.ScrKeyStateOpen) refers to board_led.o(i.board_led_open) for board_led_open
+    scr_key.o(i.ScrKeyStateOpen) refers to scr_key.o(.data) for WaitDelayTick
+    scr_key.o(i.ScrKeyStateSwitch) refers to board_key.o(i.okey_state_switch) for okey_state_switch
+    scr_key.o(i.WaitDelayHandler) refers to scr_key.o(.data) for WaitDelayTick
+    conf_key.o(i.ConfKeyInit) refers to conf_key.o(.bss) for conf_key
+    conf_key.o(i.ConfKeyStateSwitch) refers to board_key.o(i.okey_state_switch) for okey_state_switch
+    ps.o(i.PsHandler) refers to ps.o(.data) for g_ps
+    ps.o(i.PsInit) refers to ps.o(.data) for g_ps
+    ps.o(i.PsOff) refers to board_ir.o(i.board_irps_stop) for board_irps_stop
+    ps.o(i.PsOn) refers to board_ir.o(i.board_irps_start) for board_irps_start
+    ps.o(i.PsReset) refers to ps.o(.data) for g_ps
+    ps.o(i.PsSleep) refers to ps.o(i.PsOn) for PsOn
+    ps.o(i.PsSleep) refers to board_led.o(i.board_led_display) for board_led_display
+    ps.o(i.PsSleep) refers to board_led.o(i.board_led_display_dis) for board_led_display_dis
+    ps.o(i.PsSleep) refers to ps.o(.data) for g_ps
+    ps.o(i.PsWake) refers to ps.o(i.PsOff) for PsOff
+    ps.o(i.PsWake) refers to ps.o(i.PsReset) for PsReset
+    ps.o(i.PsWake) refers to board_led.o(i.board_led_display_en) for board_led_display_en
+    ps.o(i.PsWake) refers to board_led.o(i.board_led_refresh) for board_led_refresh
+    ps.o(i.PsWake) refers to ps.o(.data) for g_ps
+    et6290.o(i.et6290_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    et6290.o(i.et6290_init) refers to gpio.o(i.gpio_set_dir) for gpio_set_dir
+    et6290.o(i.et6290_send_cmd) refers to et6290.o(i.et6290a_send_cmd) for et6290a_send_cmd
+    et6290.o(i.et6290_send_cmd) refers to et6290.o(i.et6290b_send_cmd) for et6290b_send_cmd
+    et6290.o(i.et6290a_send_cmd) refers to et6290.o(i.et6290a_sendbyte) for et6290a_sendbyte
+    et6290.o(i.et6290a_send_cmd) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    et6290.o(i.et6290a_send_cmd) refers to et6290.o(i.et6290_delay) for et6290_delay
+    et6290.o(i.et6290a_sendbyte) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    et6290.o(i.et6290a_sendbyte) refers to et6290.o(i.et6290_delay) for et6290_delay
+    et6290.o(i.et6290b_send_cmd) refers to et6290.o(i.et6290b_sendbyte) for et6290b_sendbyte
+    et6290.o(i.et6290b_send_cmd) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    et6290.o(i.et6290b_send_cmd) refers to et6290.o(i.et6290_delay) for et6290_delay
+    et6290.o(i.et6290b_sendbyte) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    et6290.o(i.et6290b_sendbyte) refers to et6290.o(i.et6290_delay) for et6290_delay
+    board_ir.o(i.board_ir_clean) refers to board_ir.o(.data) for ircode
+    board_ir.o(i.board_ir_get) refers to board_ir.o(.data) for ircode
+    board_ir.o(i.board_ir_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    board_ir.o(i.board_ir_init) refers to gpio.o(i.gpio_set_dir) for gpio_set_dir
+    board_ir.o(i.board_ir_init) refers to gpio.o(i.gpio_set_interrupt) for gpio_set_interrupt
+    board_ir.o(i.board_ir_init) refers to gpio.o(i.gpio_enable_interrupt) for gpio_enable_interrupt
+    board_ir.o(i.board_irps_clean) refers to board_ir.o(.data) for _irps_state
+    board_ir.o(i.board_irps_disable) refers to timer.o(i.ct16b0_set_match) for ct16b0_set_match
+    board_ir.o(i.board_irps_enable) refers to timer.o(i.ct16b0_set_match) for ct16b0_set_match
+    board_ir.o(i.board_irps_get) refers to board_ir.o(.data) for _irps_recv_count
+    board_ir.o(i.board_irps_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    board_ir.o(i.board_irps_init) refers to timer.o(i.ct16b0_pwn_init) for ct16b0_pwn_init
+    board_ir.o(i.board_irps_start) refers to board_ir.o(.data) for _irps_flag
+    board_ir.o(i.board_irps_stop) refers to board_ir.o(i.board_irps_disable) for board_irps_disable
+    board_ir.o(i.board_irps_stop) refers to board_ir.o(.data) for _irps_flag
+    board_ir.o(i.handler_ir) refers to gpio.o(i.gpio_get_intstatus) for gpio_get_intstatus
+    board_ir.o(i.handler_ir) refers to gpio.o(i.gpio_get_bitval) for gpio_get_bitval
+    board_ir.o(i.handler_ir) refers to gpio.o(i.gpio_clear_interrupt) for gpio_clear_interrupt
+    board_ir.o(i.handler_ir) refers to board_ir.o(.data) for _ir_tick
+    board_ir.o(i.handler_ir_tick) refers to board_ir.o(.data) for _ir_tick
+    board_ir.o(i.handler_irps_send) refers to board_ir.o(i.board_irps_enable) for board_irps_enable
+    board_ir.o(i.handler_irps_send) refers to board_ir.o(i.board_irps_disable) for board_irps_disable
+    board_ir.o(i.handler_irps_send) refers to board_ir.o(.data) for _irps_flag
+    board_key.o(i.board_key_free_wait) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_key.o(i.board_key_free_wait) refers to board_key.o(i.board_key_scan) for board_key_scan
+    board_key.o(i.board_key_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    board_key.o(i.board_key_init) refers to gpio.o(i.gpio_set_dir) for gpio_set_dir
+    board_key.o(i.board_key_scan) refers to board_key.o(.data) for _board_keys
+    board_key.o(i.ch1_get) refers to gpio.o(i.gpio_get_bitval) for gpio_get_bitval
+    board_key.o(i.ch1_on) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    board_key.o(i.ch2_get) refers to gpio.o(i.gpio_get_bitval) for gpio_get_bitval
+    board_key.o(i.ch2_on) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    board_key.o(i.handler_key_scan) refers to board_key.o(i.ch2_get) for ch2_get
+    board_key.o(i.handler_key_scan) refers to board_key.o(i.ch1_on) for ch1_on
+    board_key.o(i.handler_key_scan) refers to board_key.o(i.ch1_get) for ch1_get
+    board_key.o(i.handler_key_scan) refers to board_key.o(i.ch2_on) for ch2_on
+    board_key.o(i.handler_key_scan) refers to board_key.o(.data) for _key_ticks
+    board_key.o(i.is_okey_lhold) refers to board_time.o(i.board_time_get) for board_time_get
+    board_key.o(i.is_okey_lhold) refers to board_time.o(i.board_time_calc) for board_time_calc
+    board_key.o(i.okey_state_switch) refers to system_lpc112x.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    board_key.o(i.okey_state_switch) refers to board_time.o(i.board_time_get) for board_time_get
+    board_key.o(i.okey_time_reset) refers to board_time.o(i.board_time_get) for board_time_get
+    board_led.o(i.board_led_backlight_get) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_led.o(i.board_led_backlight_get) refers to board_led.o(.bss) for _led_back_color
+    board_led.o(i.board_led_backlight_set) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_led.o(i.board_led_backlight_set) refers to board_led.o(.bss) for _led_back_color
+    board_led.o(i.board_led_close) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_led.o(i.board_led_close) refers to board_led.o(i.board_led_display) for board_led_display
+    board_led.o(i.board_led_close) refers to board_led.o(.data) for _display_leds
+    board_led.o(i.board_led_close) refers to board_led.o(.bss) for _led_back_color
+    board_led.o(i.board_led_display) refers to et6290.o(i.et6290_send_cmd) for et6290_send_cmd
+    board_led.o(i.board_led_display) refers to board_led.o(.data) for _display_flag
+    board_led.o(i.board_led_display_dis) refers to board_led.o(.data) for _display_flag
+    board_led.o(i.board_led_display_en) refers to board_led.o(.data) for _display_flag
+    board_led.o(i.board_led_flash_add) refers to board_led.o(.data) for _flash_leds
+    board_led.o(i.board_led_flash_del) refers to board_led.o(.data) for _flash_leds
+    board_led.o(i.board_led_flash_set) refers to board_led.o(.data) for _flash_leds
+    board_led.o(i.board_led_flash_start) refers to board_led.o(i.board_led_close) for board_led_close
+    board_led.o(i.board_led_flash_start) refers to board_led.o(.data) for _led_flash_flag
+    board_led.o(i.board_led_flash_stop) refers to board_led.o(i.board_led_close) for board_led_close
+    board_led.o(i.board_led_flash_stop) refers to board_led.o(.data) for _led_flash_flag
+    board_led.o(i.board_led_forelight_get) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_led.o(i.board_led_forelight_get) refers to board_led.o(.bss) for _led_fore_color
+    board_led.o(i.board_led_forelight_set) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_led.o(i.board_led_forelight_set) refers to board_led.o(.bss) for _led_fore_color
+    board_led.o(i.board_led_init) refers to et6290.o(i.et6290_init) for et6290_init
+    board_led.o(i.board_led_init) refers to board_led.o(i.board_led_display_en) for board_led_display_en
+    board_led.o(i.board_led_open) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_led.o(i.board_led_open) refers to board_led.o(i.board_led_display) for board_led_display
+    board_led.o(i.board_led_open) refers to board_led.o(.data) for _display_leds
+    board_led.o(i.board_led_open) refers to board_led.o(.bss) for _led_fore_color
+    board_led.o(i.board_led_refresh) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_led.o(i.board_led_refresh) refers to board_led.o(i.board_led_display) for board_led_display
+    board_led.o(i.board_led_refresh) refers to board_led.o(.data) for _display_leds
+    board_led.o(i.board_led_refresh) refers to board_led.o(.bss) for _led_fore_color
+    board_led.o(i.board_led_rotate_start) refers to board_led.o(i.board_led_close) for board_led_close
+    board_led.o(i.board_led_rotate_start) refers to board_led.o(.data) for _led_rotate_flag
+    board_led.o(i.board_led_rotate_stop) refers to board_led.o(i.board_led_close) for board_led_close
+    board_led.o(i.board_led_rotate_stop) refers to board_led.o(.data) for _led_rotate_flag
+    board_led.o(i.handler_flash_led) refers to board_led.o(i.board_led_open) for board_led_open
+    board_led.o(i.handler_flash_led) refers to board_led.o(i.board_led_close) for board_led_close
+    board_led.o(i.handler_flash_led) refers to board_led.o(.data) for _led_flash_flag
+    board_led.o(i.handler_rotate_led) refers to board_led.o(i.board_led_open) for board_led_open
+    board_led.o(i.handler_rotate_led) refers to board_led.o(i.board_led_close) for board_led_close
+    board_led.o(i.handler_rotate_led) refers to board_led.o(.data) for _led_rotate_flag
+    board_light.o(i.board_light_close) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    board_light.o(i.board_light_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    board_light.o(i.board_light_init) refers to gpio.o(i.gpio_set_dir) for gpio_set_dir
+    board_light.o(i.board_light_init) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    board_light.o(i.board_light_init) refers to board_light.o(i.board_light_devinit) for board_light_devinit
+    board_light.o(i.board_light_init) refers to board_light.o(.bss) for _light_array
+    board_light.o(i.board_light_open) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    board_light.o(i.board_light_register) refers to board_light.o(.bss) for _light_array
+    board_rs485.o(i.board_rs485_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    board_rs485.o(i.board_rs485_init) refers to iocon.o(i.iocon_u0_rxd_loc) for iocon_u0_rxd_loc
+    board_rs485.o(i.board_rs485_init) refers to gpio.o(i.gpio_set_dir) for gpio_set_dir
+    board_rs485.o(i.board_rs485_init) refers to gpio.o(i.gpio_set_bitval) for gpio_set_bitval
+    board_rs485.o(i.board_rs485_init) refers to uart.o(i.uart0_init) for uart0_init
+    board_rs485.o(i.board_rs485_read) refers to memcpya.o(.text) for __aeabi_memcpy
+    board_rs485.o(i.board_rs485_read) refers to memseta.o(.text) for __aeabi_memclr
+    board_rs485.o(i.board_rs485_read) refers to board_rs485.o(.data) for rs485_recv_flag
+    board_rs485.o(i.board_rs485_read) refers to board_rs485.o(.bss) for rs485_recv_buf
+    board_rs485.o(i.board_rs485_write_nbyte) refers to uart.o(i.uart0_send_byte) for uart0_send_byte
+    board_rs485.o(i.handler_rs485) refers to memcpya.o(.text) for __aeabi_memcpy
+    board_rs485.o(i.handler_rs485) refers to memseta.o(.text) for __aeabi_memclr
+    board_rs485.o(i.handler_rs485) refers to board_rs485.o(.data) for _rs485_idle_tick
+    board_rs485.o(i.handler_rs485) refers to board_rs485.o(.bss) for recv_buf
+    board_rs485.o(i.handler_rs485_idle) refers to board_rs485.o(.data) for _rs485_idle_flag
+    board_rs485.o(i.is_board_rs485_idle) refers to board_rs485.o(.data) for _rs485_idle_flag
+    board_time.o(i.board_time_delay1ms) refers to board_wdt.o(i.board_wdt_feed) for board_wdt_feed
+    board_time.o(i.board_time_delay1ms) refers to board_time.o(.data) for _delayms_time
+    board_time.o(i.board_time_get) refers to board_time.o(.data) for _systick
+    board_time.o(i.board_time_init) refers to systick.o(i.systick_init) for systick_init
+    board_time.o(i.board_time_init) refers to timer.o(i.ct16b1_timer_init) for ct16b1_timer_init
+    board_time.o(i.board_time_out_set) refers to board_time.o(.data) for _timeout_time
+    board_time.o(i.board_time_out_wait) refers to board_time.o(.data) for _timeout_time
+    board_time.o(i.handler_delayms) refers to board_time.o(.data) for _delayms_time
+    board_time.o(i.handler_systick) refers to board_time.o(i.handler_delayms) for handler_delayms
+    board_time.o(i.handler_systick) refers to board_time.o(i.handler_timeout) for handler_timeout
+    board_time.o(i.handler_systick) refers to board_time.o(.data) for _systick
+    board_time.o(i.handler_timeout) refers to board_time.o(.data) for _timeout_time
+    board_wdt.o(i.board_wdt_feed) refers to wdt.o(i.wdt_feed) for wdt_feed
+    board_wdt.o(i.board_wdt_init) refers to wdt.o(i.wdt_init) for wdt_init
+    door.o(i.DoorCloseFeedback) refers to network.o(i.NetworkSend) for NetworkSend
+    door.o(i.DoorCloseFeedback) refers to door.o(.data) for door
+    door.o(i.DoorGetSta) refers to gpio.o(i.gpio_get_bitval) for gpio_get_bitval
+    door.o(i.DoorHander) refers to door.o(.data) for door
+    door.o(i.DoorInit) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    door.o(i.DoorInit) refers to gpio.o(i.gpio_set_dir) for gpio_set_dir
+    door.o(i.DoorInit) refers to door.o(.data) for door
+    door.o(i.DoorIsCanCheck) refers to door.o(.data) for door
+    door.o(i.DoorOpenFeedback) refers to network.o(i.NetworkSend) for NetworkSend
+    door.o(i.DoorOpenFeedback) refers to door.o(.data) for door
+    board_flash.o(i.FlashWriteData) refers to memseta.o(.text) for __aeabi_memclr4
+    board_flash.o(i.FlashWriteData) refers to memcpya.o(.text) for __aeabi_memcpy
+    board_flash.o(i.FlashWriteData) refers to iap.o(i.sectorPrepare) for sectorPrepare
+    board_flash.o(i.FlashWriteData) refers to iap.o(i.sectorErase) for sectorErase
+    board_flash.o(i.FlashWriteData) refers to iap.o(i.ramCopy) for ramCopy
+    board_flash.o(i.FlashWriteData) refers to iap.o(.data) for IAP_Entry
+    gpio.o(i.gpio_set_interrupt) refers to system_lpc112x.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    i2c.o(i.i2c_init) refers to syscon.o(i.syscon_ppp_reset_dis) for syscon_ppp_reset_dis
+    i2c.o(i.i2c_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    i2c.o(i.i2c_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    i2c.o(i.i2c_init) refers to i2c.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    i2c.o(i.i2c_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    i2c.o(i.i2c_read_nbyte) refers to i2cint.o(i.I2C_ReadNByte) for I2C_ReadNByte
+    i2c.o(i.i2c_recv_byte) refers to i2cint.o(i.IRcvByte) for IRcvByte
+    i2c.o(i.i2c_send_byte) refers to i2cint.o(i.ISendByte) for ISendByte
+    i2c.o(i.i2c_write_nbyte) refers to i2cint.o(i.I2C_WriteNByte) for I2C_WriteNByte
+    i2c.o(i.i2c_write_nbyte) refers to delay.o(i.delay_ms) for delay_ms
+    i2cint.o(i.I2C_IRQHandler) refers to system_lpc112x.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    i2cint.o(i.I2C_IRQHandler) refers to i2cint.o(.data) for I2C_suba_en
+    i2cint.o(i.I2C_ReadNByte) refers to i2cint.o(i.Wait_I2c_End) for Wait_I2c_End
+    i2cint.o(i.I2C_ReadNByte) refers to i2cint.o(.data) for I2C_sla
+    i2cint.o(i.I2C_WriteNByte) refers to i2cint.o(i.Wait_I2c_End) for Wait_I2c_End
+    i2cint.o(i.I2C_WriteNByte) refers to i2cint.o(.data) for I2C_sla
+    i2cint.o(i.IRcvByte) refers to i2cint.o(i.Wait_I2c_End) for Wait_I2c_End
+    i2cint.o(i.IRcvByte) refers to i2cint.o(.data) for I2C_sla
+    i2cint.o(i.ISendByte) refers to i2cint.o(i.Wait_I2c_End) for Wait_I2c_End
+    i2cint.o(i.ISendByte) refers to i2cint.o(.data) for I2C_sla
+    i2cint.o(i.Wait_I2c_End) refers to i2cint.o(.data) for I2C_end
+    systick.o(i.systick_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    systick.o(i.systick_init) refers to systick.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    systick.o(i.systick_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    timer.o(i.ct16b0_pwn_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    timer.o(i.ct16b0_pwn_init) refers to timer.o(i.ct16b0_reset) for ct16b0_reset
+    timer.o(i.ct16b0_pwn_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    timer.o(i.ct16b0_pwn_init) refers to timer.o(i.ct16b0_enable) for ct16b0_enable
+    timer.o(i.ct16b0_pwn_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    timer.o(i.ct16b0_set_match) refers to uidiv.o(.text) for __aeabi_uidivmod
+    timer.o(i.ct16b0_timer_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    timer.o(i.ct16b0_timer_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    timer.o(i.ct16b0_timer_init) refers to timer.o(i.ct16b0_enable) for ct16b0_enable
+    timer.o(i.ct16b0_timer_init) refers to timer.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    timer.o(i.ct16b0_timer_init) refers to timer.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    timer.o(i.ct16b0_timer_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    timer.o(i.ct16b1_pwm_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    timer.o(i.ct16b1_pwm_init) refers to timer.o(i.ct16b1_reset) for ct16b1_reset
+    timer.o(i.ct16b1_pwm_init) refers to timer.o(i.ct16b1_enable) for ct16b1_enable
+    timer.o(i.ct16b1_timer_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    timer.o(i.ct16b1_timer_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    timer.o(i.ct16b1_timer_init) refers to timer.o(i.ct16b1_enable) for ct16b1_enable
+    timer.o(i.ct16b1_timer_init) refers to timer.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    timer.o(i.ct16b1_timer_init) refers to timer.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    timer.o(i.ct16b1_timer_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    timer.o(i.ct32b0_pwm_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    timer.o(i.ct32b0_pwm_init) refers to timer.o(i.ct32b0_reset) for ct32b0_reset
+    timer.o(i.ct32b0_pwm_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    timer.o(i.ct32b0_pwm_init) refers to timer.o(i.ct32b0_enable) for ct32b0_enable
+    timer.o(i.ct32b0_pwm_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    timer.o(i.ct32b0_set_match) refers to uidiv.o(.text) for __aeabi_uidivmod
+    timer.o(i.ct32b0_timer_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    timer.o(i.ct32b0_timer_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    timer.o(i.ct32b0_timer_init) refers to timer.o(i.ct32b0_enable) for ct32b0_enable
+    timer.o(i.ct32b0_timer_init) refers to timer.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    timer.o(i.ct32b0_timer_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    timer.o(i.ct32b1_pwm_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    timer.o(i.ct32b1_pwm_init) refers to timer.o(i.ct32b1_reset) for ct32b1_reset
+    timer.o(i.ct32b1_pwm_init) refers to timer.o(i.ct32b1_enable) for ct32b1_enable
+    timer.o(i.ct32b1_timer_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    timer.o(i.ct32b1_timer_init) refers to timer.o(i.ct32b1_reset) for ct32b1_reset
+    timer.o(i.ct32b1_timer_init) refers to timer.o(i.ct32b1_enable) for ct32b1_enable
+    timer.o(i.ct32b1_timer_init) refers to timer.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.uart0_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    uart.o(i.uart0_init) refers to syscon.o(i.syscon_uart0_div) for syscon_uart0_div
+    uart.o(i.uart0_init) refers to dfltui.o(.text) for __aeabi_ui2d
+    uart.o(i.uart0_init) refers to dmul.o(.text) for __aeabi_dmul
+    uart.o(i.uart0_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.uart0_init) refers to ddiv.o(.text) for __aeabi_ddiv
+    uart.o(i.uart0_init) refers to dfixui.o(.text) for __aeabi_d2uiz
+    uart.o(i.uart0_init) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.uart0_init) refers to uart.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    uart.o(i.uart0_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    uart.o(i.uart2_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    uart.o(i.uart2_init) refers to dfltui.o(.text) for __aeabi_ui2d
+    uart.o(i.uart2_init) refers to dmul.o(.text) for __aeabi_dmul
+    uart.o(i.uart2_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.uart2_init) refers to ddiv.o(.text) for __aeabi_ddiv
+    uart.o(i.uart2_init) refers to dfixui.o(.text) for __aeabi_d2uiz
+    uart.o(i.uart2_init) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.uart2_init) refers to uart.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    uart.o(i.uart2_init) refers to system_lpc112x.o(.data) for SystemCoreClock
+    wdt.o(i.wdt_init) refers to syscon.o(i.syscon_wdt_osc) for syscon_wdt_osc
+    wdt.o(i.wdt_init) refers to syscon.o(i.syscon_pd_on) for syscon_pd_on
+    wdt.o(i.wdt_init) refers to syscon.o(i.syscon_wdt_clk_update) for syscon_wdt_clk_update
+    wdt.o(i.wdt_init) refers to syscon.o(i.syscon_wdt_div) for syscon_wdt_div
+    wdt.o(i.wdt_init) refers to syscon.o(i.syscon_ahb_enable) for syscon_ahb_enable
+    wdt.o(i.wdt_init) refers to wdt.o(i.wdt_feed) for wdt_feed
+    iap.o(i.blankChk) refers to iap.o(.bss) for paramin
+    iap.o(i.blankChk) refers to iap.o(.data) for IAP_Entry
+    iap.o(i.codeIdBoot) refers to iap.o(.bss) for paramin
+    iap.o(i.codeIdBoot) refers to iap.o(.data) for IAP_Entry
+    iap.o(i.dataCompare) refers to iap.o(.bss) for paramin
+    iap.o(i.dataCompare) refers to iap.o(.data) for IAP_Entry
+    iap.o(i.parIdRead) refers to iap.o(.bss) for paramin
+    iap.o(i.parIdRead) refers to iap.o(.data) for IAP_Entry
+    iap.o(i.ramCopy) refers to iap.o(.bss) for paramin
+    iap.o(i.ramCopy) refers to iap.o(.data) for IAP_Entry
+    iap.o(i.sectorErase) refers to iap.o(.bss) for paramin
+    iap.o(i.sectorErase) refers to iap.o(.data) for IAP_Entry
+    iap.o(i.sectorPrepare) refers to iap.o(.bss) for paramin
+    iap.o(i.sectorPrepare) refers to iap.o(.data) for IAP_Entry
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    idiv.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_lpc112x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_lpc112x.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(i.fputc), (16 bytes).
+    Removing system_lpc112x.o(.rev16_text), (4 bytes).
+    Removing system_lpc112x.o(.revsh_text), (4 bytes).
+    Removing system_lpc112x.o(i.SystemCoreClockUpdate), (440 bytes).
+    Removing startup_lpc112x.o(HEAP), (256 bytes).
+    Removing network.o(.rev16_text), (4 bytes).
+    Removing network.o(.revsh_text), (4 bytes).
+    Removing delay.o(i.delay_us), (12 bytes).
+    Removing interrupt.o(.rev16_text), (4 bytes).
+    Removing interrupt.o(.revsh_text), (4 bytes).
+    Removing sys.o(.rev16_text), (4 bytes).
+    Removing sys.o(.revsh_text), (4 bytes).
+    Removing sys.o(i.SysInfoColorGet), (12 bytes).
+    Removing keycolor.o(.rev16_text), (4 bytes).
+    Removing keycolor.o(.revsh_text), (4 bytes).
+    Removing scr_key.o(.rev16_text), (4 bytes).
+    Removing scr_key.o(.revsh_text), (4 bytes).
+    Removing scr_key.o(i.ScrKeyMutexAll), (72 bytes).
+    Removing conf_key.o(.rev16_text), (4 bytes).
+    Removing conf_key.o(.revsh_text), (4 bytes).
+    Removing ps.o(.rev16_text), (4 bytes).
+    Removing ps.o(.revsh_text), (4 bytes).
+    Removing et6290.o(.rev16_text), (4 bytes).
+    Removing et6290.o(.revsh_text), (4 bytes).
+    Removing board_ir.o(.rev16_text), (4 bytes).
+    Removing board_ir.o(.revsh_text), (4 bytes).
+    Removing board_ir.o(i.board_irps_clean), (12 bytes).
+    Removing board_key.o(.rev16_text), (4 bytes).
+    Removing board_key.o(.revsh_text), (4 bytes).
+    Removing board_key.o(i.handler_key_scan2), (2 bytes).
+    Removing board_key.o(i.is_okey_lhold), (48 bytes).
+    Removing board_key.o(i.okey_state_set), (4 bytes).
+    Removing board_key.o(i.okey_time_reset), (16 bytes).
+    Removing board_key.o(i.okey_time_set), (4 bytes).
+    Removing board_led.o(.rev16_text), (4 bytes).
+    Removing board_led.o(.revsh_text), (4 bytes).
+    Removing board_led.o(i.board_led_backlight_get), (96 bytes).
+    Removing board_led.o(i.board_led_flash_set), (12 bytes).
+    Removing board_led.o(i.board_led_forelight_get), (96 bytes).
+    Removing board_light.o(.rev16_text), (4 bytes).
+    Removing board_light.o(.revsh_text), (4 bytes).
+    Removing board_light.o(i.board_rl_delay_close), (2 bytes).
+    Removing board_light.o(i.board_rl_delay_open), (2 bytes).
+    Removing board_light.o(i.handler_light), (2 bytes).
+    Removing board_rs485.o(.rev16_text), (4 bytes).
+    Removing board_rs485.o(.revsh_text), (4 bytes).
+    Removing board_rs485.o(i.is_board_rs485_idle), (12 bytes).
+    Removing board_time.o(.rev16_text), (4 bytes).
+    Removing board_time.o(.revsh_text), (4 bytes).
+    Removing board_time.o(i.board_time_calc), (16 bytes).
+    Removing board_time.o(i.board_time_delay1ms), (28 bytes).
+    Removing board_wdt.o(.rev16_text), (4 bytes).
+    Removing board_wdt.o(.revsh_text), (4 bytes).
+    Removing door.o(.rev16_text), (4 bytes).
+    Removing door.o(.revsh_text), (4 bytes).
+    Removing board_flash.o(.rev16_text), (4 bytes).
+    Removing board_flash.o(.revsh_text), (4 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing i2c.o(.rev16_text), (4 bytes).
+    Removing i2c.o(.revsh_text), (4 bytes).
+    Removing i2c.o(i.NVIC_SetPriority), (120 bytes).
+    Removing i2c.o(i.i2c_init), (104 bytes).
+    Removing i2c.o(i.i2c_read_nbyte), (38 bytes).
+    Removing i2c.o(i.i2c_recv_byte), (16 bytes).
+    Removing i2c.o(i.i2c_send_byte), (16 bytes).
+    Removing i2c.o(i.i2c_write_nbyte), (46 bytes).
+    Removing i2cint.o(.rev16_text), (4 bytes).
+    Removing i2cint.o(.revsh_text), (4 bytes).
+    Removing i2cint.o(i.I2C_ReadNByte), (156 bytes).
+    Removing i2cint.o(i.I2C_WriteNByte), (152 bytes).
+    Removing i2cint.o(i.IRcvByte), (72 bytes).
+    Removing i2cint.o(i.ISendByte), (72 bytes).
+    Removing i2cint.o(i.Wait_I2c_End), (56 bytes).
+    Removing iocon.o(.rev16_text), (4 bytes).
+    Removing iocon.o(.revsh_text), (4 bytes).
+    Removing syscon.o(.rev16_text), (4 bytes).
+    Removing syscon.o(.revsh_text), (4 bytes).
+    Removing syscon.o(i.syscon_ahb_div), (12 bytes).
+    Removing syscon.o(i.syscon_clkout_cs), (12 bytes).
+    Removing syscon.o(i.syscon_clkout_cs_update), (20 bytes).
+    Removing syscon.o(i.syscon_clkout_div), (12 bytes).
+    Removing syscon.o(i.syscon_pd_off), (16 bytes).
+    Removing syscon.o(i.syscon_ppp_reset_dis), (16 bytes).
+    Removing syscon.o(i.syscon_ppp_reset_en), (16 bytes).
+    Removing syscon.o(i.syscon_spi0_div), (12 bytes).
+    Removing syscon.o(i.syscon_spi1_div), (12 bytes).
+    Removing systick.o(.rev16_text), (4 bytes).
+    Removing systick.o(.revsh_text), (4 bytes).
+    Removing timer.o(.rev16_text), (4 bytes).
+    Removing timer.o(.revsh_text), (4 bytes).
+    Removing timer.o(i.ct16b0_disable), (12 bytes).
+    Removing timer.o(i.ct16b0_timer_init), (84 bytes).
+    Removing timer.o(i.ct16b1_disable), (12 bytes).
+    Removing timer.o(i.ct16b1_pwm_init), (18 bytes).
+    Removing timer.o(i.ct16b1_reset), (12 bytes).
+    Removing timer.o(i.ct32b0_disable), (12 bytes).
+    Removing timer.o(i.ct32b0_enable), (12 bytes).
+    Removing timer.o(i.ct32b0_pwm_init), (120 bytes).
+    Removing timer.o(i.ct32b0_reset), (12 bytes).
+    Removing timer.o(i.ct32b0_set_match), (92 bytes).
+    Removing timer.o(i.ct32b0_timer_init), (76 bytes).
+    Removing timer.o(i.ct32b1_disable), (12 bytes).
+    Removing timer.o(i.ct32b1_enable), (12 bytes).
+    Removing timer.o(i.ct32b1_pwm_init), (18 bytes).
+    Removing timer.o(i.ct32b1_reset), (12 bytes).
+    Removing timer.o(i.ct32b1_timer_init), (24 bytes).
+    Removing uart.o(.rev16_text), (4 bytes).
+    Removing uart.o(.revsh_text), (4 bytes).
+    Removing uart.o(i.uart0_recv_byte), (12 bytes).
+    Removing uart.o(i.uart2_init), (184 bytes).
+    Removing uart.o(i.uart2_send), (56 bytes).
+    Removing uart.o(i.uart2_send_byte), (24 bytes).
+    Removing wdt.o(.rev16_text), (4 bytes).
+    Removing wdt.o(.revsh_text), (4 bytes).
+    Removing iap.o(.rev16_text), (4 bytes).
+    Removing iap.o(.revsh_text), (4 bytes).
+    Removing iap.o(i.blankChk), (44 bytes).
+    Removing iap.o(i.codeIdBoot), (36 bytes).
+    Removing iap.o(i.dataCompare), (48 bytes).
+    Removing iap.o(i.parIdRead), (36 bytes).
+
+123 unused section(s) (total 3348 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  startup_lpc112x.o(RESET)
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\Code\App\conf_key.c                   0x00000000   Number         0  conf_key.o ABSOLUTE
+    ..\Code\App\delay.c                      0x00000000   Number         0  delay.o ABSOLUTE
+    ..\Code\App\interrupt.c                  0x00000000   Number         0  interrupt.o ABSOLUTE
+    ..\Code\App\keycolor.c                   0x00000000   Number         0  keycolor.o ABSOLUTE
+    ..\Code\App\network.c                    0x00000000   Number         0  network.o ABSOLUTE
+    ..\Code\App\ps.c                         0x00000000   Number         0  ps.o ABSOLUTE
+    ..\Code\App\scr_key.c                    0x00000000   Number         0  scr_key.o ABSOLUTE
+    ..\Code\App\sys.c                        0x00000000   Number         0  sys.o ABSOLUTE
+    ..\Code\Driver\board_flash.c             0x00000000   Number         0  board_flash.o ABSOLUTE
+    ..\Code\Driver\board_ir.c                0x00000000   Number         0  board_ir.o ABSOLUTE
+    ..\Code\Driver\board_key.c               0x00000000   Number         0  board_key.o ABSOLUTE
+    ..\Code\Driver\board_led.c               0x00000000   Number         0  board_led.o ABSOLUTE
+    ..\Code\Driver\board_light.c             0x00000000   Number         0  board_light.o ABSOLUTE
+    ..\Code\Driver\board_rs485.c             0x00000000   Number         0  board_rs485.o ABSOLUTE
+    ..\Code\Driver\board_time.c              0x00000000   Number         0  board_time.o ABSOLUTE
+    ..\Code\Driver\board_wdt.c               0x00000000   Number         0  board_wdt.o ABSOLUTE
+    ..\Code\Driver\door.c                    0x00000000   Number         0  door.o ABSOLUTE
+    ..\Code\Driver\et6290\et6290.c           0x00000000   Number         0  et6290.o ABSOLUTE
+    ..\Code\Main\main.c                      0x00000000   Number         0  main.o ABSOLUTE
+    ..\Code\NXPLib\CMSIS\lpc112x\startup_LPC112x.s 0x00000000   Number         0  startup_lpc112x.o ABSOLUTE
+    ..\Code\NXPLib\CMSIS\lpc112x\system_LPC112x.c 0x00000000   Number         0  system_lpc112x.o ABSOLUTE
+    ..\Code\NXPLib\I2CINT\I2CINT.c           0x00000000   Number         0  i2cint.o ABSOLUTE
+    ..\Code\NXPLib\gpio.c                    0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\Code\NXPLib\i2c.c                     0x00000000   Number         0  i2c.o ABSOLUTE
+    ..\Code\NXPLib\iap.c                     0x00000000   Number         0  iap.o ABSOLUTE
+    ..\Code\NXPLib\iocon.c                   0x00000000   Number         0  iocon.o ABSOLUTE
+    ..\Code\NXPLib\syscon.c                  0x00000000   Number         0  syscon.o ABSOLUTE
+    ..\Code\NXPLib\systick.c                 0x00000000   Number         0  systick.o ABSOLUTE
+    ..\Code\NXPLib\timer.c                   0x00000000   Number         0  timer.o ABSOLUTE
+    ..\Code\NXPLib\uart.c                    0x00000000   Number         0  uart.o ABSOLUTE
+    ..\Code\NXPLib\wdt.c                     0x00000000   Number         0  wdt.o ABSOLUTE
+    ..\\Code\\App\\conf_key.c                0x00000000   Number         0  conf_key.o ABSOLUTE
+    ..\\Code\\App\\interrupt.c               0x00000000   Number         0  interrupt.o ABSOLUTE
+    ..\\Code\\App\\keycolor.c                0x00000000   Number         0  keycolor.o ABSOLUTE
+    ..\\Code\\App\\network.c                 0x00000000   Number         0  network.o ABSOLUTE
+    ..\\Code\\App\\ps.c                      0x00000000   Number         0  ps.o ABSOLUTE
+    ..\\Code\\App\\scr_key.c                 0x00000000   Number         0  scr_key.o ABSOLUTE
+    ..\\Code\\App\\sys.c                     0x00000000   Number         0  sys.o ABSOLUTE
+    ..\\Code\\Driver\\board_flash.c          0x00000000   Number         0  board_flash.o ABSOLUTE
+    ..\\Code\\Driver\\board_ir.c             0x00000000   Number         0  board_ir.o ABSOLUTE
+    ..\\Code\\Driver\\board_key.c            0x00000000   Number         0  board_key.o ABSOLUTE
+    ..\\Code\\Driver\\board_led.c            0x00000000   Number         0  board_led.o ABSOLUTE
+    ..\\Code\\Driver\\board_light.c          0x00000000   Number         0  board_light.o ABSOLUTE
+    ..\\Code\\Driver\\board_rs485.c          0x00000000   Number         0  board_rs485.o ABSOLUTE
+    ..\\Code\\Driver\\board_time.c           0x00000000   Number         0  board_time.o ABSOLUTE
+    ..\\Code\\Driver\\board_wdt.c            0x00000000   Number         0  board_wdt.o ABSOLUTE
+    ..\\Code\\Driver\\door.c                 0x00000000   Number         0  door.o ABSOLUTE
+    ..\\Code\\Driver\\et6290\\et6290.c       0x00000000   Number         0  et6290.o ABSOLUTE
+    ..\\Code\\Main\\main.c                   0x00000000   Number         0  main.o ABSOLUTE
+    ..\\Code\\NXPLib\\CMSIS\\lpc112x\\system_LPC112x.c 0x00000000   Number         0  system_lpc112x.o ABSOLUTE
+    ..\\Code\\NXPLib\\I2CINT\\I2CINT.c       0x00000000   Number         0  i2cint.o ABSOLUTE
+    ..\\Code\\NXPLib\\gpio.c                 0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\\Code\\NXPLib\\i2c.c                  0x00000000   Number         0  i2c.o ABSOLUTE
+    ..\\Code\\NXPLib\\iap.c                  0x00000000   Number         0  iap.o ABSOLUTE
+    ..\\Code\\NXPLib\\iocon.c                0x00000000   Number         0  iocon.o ABSOLUTE
+    ..\\Code\\NXPLib\\syscon.c               0x00000000   Number         0  syscon.o ABSOLUTE
+    ..\\Code\\NXPLib\\systick.c              0x00000000   Number         0  systick.o ABSOLUTE
+    ..\\Code\\NXPLib\\timer.c                0x00000000   Number         0  timer.o ABSOLUTE
+    ..\\Code\\NXPLib\\uart.c                 0x00000000   Number         0  uart.o ABSOLUTE
+    ..\\Code\\NXPLib\\wdt.c                  0x00000000   Number         0  wdt.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000d4   Section       28  startup_lpc112x.o(.text)
+    .text                                    0x000000f0   Section        0  uidiv.o(.text)
+    .text                                    0x0000011c   Section        0  idiv.o(.text)
+    .text                                    0x00000144   Section        0  memcpya.o(.text)
+    .text                                    0x00000168   Section        0  memseta.o(.text)
+    .text                                    0x0000018c   Section        0  dmul.o(.text)
+    .text                                    0x0000025c   Section        0  dfltui.o(.text)
+    .text                                    0x00000278   Section        0  dfixui.o(.text)
+    .text                                    0x000002b4   Section        0  llushr.o(.text)
+    .text                                    0x000002d6   Section        0  iusefp.o(.text)
+    .text                                    0x000002d8   Section       36  init.o(.text)
+    .ARM.__at_0x02FC                         0x000002fc   Section        4  startup_lpc112x.o(.ARM.__at_0x02FC)
+    .text                                    0x00000300   Section        0  ddiv.o(.text)
+    .text                                    0x000003f0   Section        0  depilogue.o(.text)
+    .text                                    0x000004ae   Section        0  llshl.o(.text)
+    i.AssocMainkeyCreate                     0x000004d0   Section        0  sys.o(i.AssocMainkeyCreate)
+    AssocMainkeyCreate                       0x000004d1   Thumb Code    58  sys.o(i.AssocMainkeyCreate)
+    i.AssocRun                               0x00000510   Section        0  scr_key.o(i.AssocRun)
+    AssocRun                                 0x00000511   Thumb Code    26  scr_key.o(i.AssocRun)
+    i.AssocSet                               0x0000052c   Section        0  sys.o(i.AssocSet)
+    AssocSet                                 0x0000052d   Thumb Code   358  sys.o(i.AssocSet)
+    i.AssocStoreDel                          0x0000069c   Section        0  sys.o(i.AssocStoreDel)
+    AssocStoreDel                            0x0000069d   Thumb Code    54  sys.o(i.AssocStoreDel)
+    i.AssocStoreSave                         0x000006d8   Section        0  sys.o(i.AssocStoreSave)
+    AssocStoreSave                           0x000006d9   Thumb Code    54  sys.o(i.AssocStoreSave)
+    i.CT16B0_IRQHandler                      0x00000714   Section        0  interrupt.o(i.CT16B0_IRQHandler)
+    i.CT16B1_IRQHandler                      0x00000718   Section        0  interrupt.o(i.CT16B1_IRQHandler)
+    i.ConfKeyInit                            0x0000073c   Section        0  conf_key.o(i.ConfKeyInit)
+    i.ConfKeyStateSwitch                     0x00000774   Section        0  conf_key.o(i.ConfKeyStateSwitch)
+    i.DoorCloseFeedback                      0x00000784   Section        0  door.o(i.DoorCloseFeedback)
+    i.DoorGetSta                             0x000007a8   Section        0  door.o(i.DoorGetSta)
+    i.DoorHander                             0x000007c4   Section        0  door.o(i.DoorHander)
+    i.DoorInit                               0x000007e0   Section        0  door.o(i.DoorInit)
+    i.DoorIsCanCheck                         0x00000814   Section        0  door.o(i.DoorIsCanCheck)
+    i.DoorOpenFeedback                       0x00000834   Section        0  door.o(i.DoorOpenFeedback)
+    i.DoorTask                               0x00000858   Section        0  sys.o(i.DoorTask)
+    i.DriverInit                             0x0000089c   Section        0  main.o(i.DriverInit)
+    DriverInit                               0x0000089d   Thumb Code    40  main.o(i.DriverInit)
+    i.FlashReadData                          0x000008c4   Section        0  board_flash.o(i.FlashReadData)
+    i.FlashWriteData                         0x000008e4   Section        0  board_flash.o(i.FlashWriteData)
+    i.GPIO0_IRQHandler                       0x00000940   Section        0  interrupt.o(i.GPIO0_IRQHandler)
+    i.I2C_IRQHandler                         0x00000948   Section        0  i2cint.o(i.I2C_IRQHandler)
+    i.IrTask                                 0x00000b80   Section        0  sys.o(i.IrTask)
+    i.KeyColorInit                           0x00000cc4   Section        0  keycolor.o(i.KeyColorInit)
+    i.KeyColorSet                            0x00000d28   Section        0  sys.o(i.KeyColorSet)
+    KeyColorSet                              0x00000d29   Thumb Code   214  sys.o(i.KeyColorSet)
+    i.KeyTask                                0x00000e18   Section        0  sys.o(i.KeyTask)
+    i.LEDCheck                               0x00000e60   Section        0  sys.o(i.LEDCheck)
+    LEDCheck                                 0x00000e61   Thumb Code   158  sys.o(i.LEDCheck)
+    i.MasterSet                              0x00000f10   Section        0  sys.o(i.MasterSet)
+    MasterSet                                0x00000f11   Thumb Code   228  sys.o(i.MasterSet)
+    i.NVIC_EnableIRQ                         0x00001008   Section        0  timer.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x00001009   Thumb Code    14  timer.o(i.NVIC_EnableIRQ)
+    i.NVIC_EnableIRQ                         0x0000101c   Section        0  uart.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x0000101d   Thumb Code    14  uart.o(i.NVIC_EnableIRQ)
+    i.NVIC_SetPriority                       0x00001030   Section        0  systick.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x00001031   Thumb Code   110  systick.o(i.NVIC_SetPriority)
+    i.NVIC_SetPriority                       0x000010a8   Section        0  timer.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x000010a9   Thumb Code   110  timer.o(i.NVIC_SetPriority)
+    i.NVIC_SetPriority                       0x00001120   Section        0  uart.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x00001121   Thumb Code   110  uart.o(i.NVIC_SetPriority)
+    i.NetWorkAssocRun                        0x00001198   Section        0  sys.o(i.NetWorkAssocRun)
+    i.NetWorkLoadRun                         0x00001210   Section        0  sys.o(i.NetWorkLoadRun)
+    NetWorkLoadRun                           0x00001211   Thumb Code   108  sys.o(i.NetWorkLoadRun)
+    i.NetWorkTask                            0x00001280   Section        0  sys.o(i.NetWorkTask)
+    i.NetworkInit                            0x000012e4   Section        0  network.o(i.NetworkInit)
+    i.NetworkRecv                            0x00001308   Section        0  network.o(i.NetworkRecv)
+    i.NetworkSend                            0x0000134c   Section        0  network.o(i.NetworkSend)
+    i.PsHandler                              0x00001364   Section        0  ps.o(i.PsHandler)
+    i.PsInit                                 0x0000137c   Section        0  ps.o(i.PsInit)
+    i.PsOff                                  0x00001390   Section        0  ps.o(i.PsOff)
+    i.PsOn                                   0x00001398   Section        0  ps.o(i.PsOn)
+    i.PsReset                                0x000013a0   Section        0  ps.o(i.PsReset)
+    i.PsSleep                                0x000013b0   Section        0  ps.o(i.PsSleep)
+    i.PsTask                                 0x000013d4   Section        0  sys.o(i.PsTask)
+    i.PsWake                                 0x000013f4   Section        0  ps.o(i.PsWake)
+    i.ScrBitSet                              0x00001414   Section        0  sys.o(i.ScrBitSet)
+    ScrBitSet                                0x00001415   Thumb Code   274  sys.o(i.ScrBitSet)
+    i.ScrKeyAssocBackup                      0x00001544   Section        0  scr_key.o(i.ScrKeyAssocBackup)
+    i.ScrKeyAssocClear                       0x00001568   Section        0  scr_key.o(i.ScrKeyAssocClear)
+    i.ScrKeyAssocResum                       0x00001580   Section        0  scr_key.o(i.ScrKeyAssocResum)
+    i.ScrKeyClear                            0x000015a4   Section        0  scr_key.o(i.ScrKeyClear)
+    i.ScrKeyHaveOpen                         0x000015dc   Section        0  scr_key.o(i.ScrKeyHaveOpen)
+    i.ScrKeyInit                             0x00001614   Section        0  scr_key.o(i.ScrKeyInit)
+    i.ScrKeyMutexOther                       0x00001794   Section        0  scr_key.o(i.ScrKeyMutexOther)
+    i.ScrKeyProcess                          0x00001810   Section        0  scr_key.o(i.ScrKeyProcess)
+    i.ScrKeyResum                            0x00001868   Section        0  scr_key.o(i.ScrKeyResum)
+    i.ScrKeyStateClose                       0x00001898   Section        0  scr_key.o(i.ScrKeyStateClose)
+    i.ScrKeyStateNone                        0x000018be   Section        0  scr_key.o(i.ScrKeyStateNone)
+    i.ScrKeyStateOpen                        0x000018e0   Section        0  scr_key.o(i.ScrKeyStateOpen)
+    i.ScrKeyStateSwitch                      0x00001924   Section        0  scr_key.o(i.ScrKeyStateSwitch)
+    i.SysInfoColorSave                       0x00001938   Section        0  sys.o(i.SysInfoColorSave)
+    i.SysInfoDefault                         0x00001950   Section        0  sys.o(i.SysInfoDefault)
+    SysInfoDefault                           0x00001951   Thumb Code    40  sys.o(i.SysInfoDefault)
+    i.SysInfoInit                            0x0000197c   Section        0  sys.o(i.SysInfoInit)
+    i.SysInfoIsMaster                        0x000019d8   Section        0  sys.o(i.SysInfoIsMaster)
+    i.SysInfoScrBitSave                      0x000019e4   Section        0  sys.o(i.SysInfoScrBitSave)
+    i.SysInfoSetMaster                       0x00001a0c   Section        0  sys.o(i.SysInfoSetMaster)
+    i.SysTick_Handler                        0x00001a24   Section        0  interrupt.o(i.SysTick_Handler)
+    i.SystemInit                             0x00001a48   Section        0  system_lpc112x.o(i.SystemInit)
+    i.UART0_IRQHandler                       0x00001ad0   Section        0  interrupt.o(i.UART0_IRQHandler)
+    i.WaitDelayHandler                       0x00001ad8   Section        0  scr_key.o(i.WaitDelayHandler)
+    i.WaitIrQuit                             0x00001af0   Section        0  sys.o(i.WaitIrQuit)
+    WaitIrQuit                               0x00001af1   Thumb Code   258  sys.o(i.WaitIrQuit)
+    i.WaitNetQuit                            0x00001c0c   Section        0  sys.o(i.WaitNetQuit)
+    WaitNetQuit                              0x00001c0d   Thumb Code    36  sys.o(i.WaitNetQuit)
+    i.WaitTask                               0x00001c30   Section        0  sys.o(i.WaitTask)
+    i.__ARM_clz                              0x00001c60   Section        0  depilogue.o(i.__ARM_clz)
+    i.__ARM_common_switch8                   0x00001c8e   Section        0  system_lpc112x.o(i.__ARM_common_switch8)
+    i.__scatterload_copy                     0x00001caa   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00001cb8   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00001cba   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.board_ir_clean                         0x00001cc8   Section        0  board_ir.o(i.board_ir_clean)
+    i.board_ir_get                           0x00001cd4   Section        0  board_ir.o(i.board_ir_get)
+    i.board_ir_init                          0x00001ce4   Section        0  board_ir.o(i.board_ir_init)
+    i.board_irps_disable                     0x00001d30   Section        0  board_ir.o(i.board_irps_disable)
+    i.board_irps_enable                      0x00001d3c   Section        0  board_ir.o(i.board_irps_enable)
+    i.board_irps_get                         0x00001d48   Section        0  board_ir.o(i.board_irps_get)
+    i.board_irps_init                        0x00001d6c   Section        0  board_ir.o(i.board_irps_init)
+    i.board_irps_start                       0x00001d84   Section        0  board_ir.o(i.board_irps_start)
+    i.board_irps_stop                        0x00001d90   Section        0  board_ir.o(i.board_irps_stop)
+    i.board_key_free_wait                    0x00001dac   Section        0  board_key.o(i.board_key_free_wait)
+    i.board_key_init                         0x00001dcc   Section        0  board_key.o(i.board_key_init)
+    i.board_key_scan                         0x00001e38   Section        0  board_key.o(i.board_key_scan)
+    i.board_led_backlight_set                0x00001e44   Section        0  board_led.o(i.board_led_backlight_set)
+    i.board_led_close                        0x00001e94   Section        0  board_led.o(i.board_led_close)
+    i.board_led_display                      0x00001efc   Section        0  board_led.o(i.board_led_display)
+    i.board_led_display_dis                  0x00001fbc   Section        0  board_led.o(i.board_led_display_dis)
+    i.board_led_display_en                   0x00001fc8   Section        0  board_led.o(i.board_led_display_en)
+    i.board_led_flash_add                    0x00001fd4   Section        0  board_led.o(i.board_led_flash_add)
+    i.board_led_flash_del                    0x00001fe4   Section        0  board_led.o(i.board_led_flash_del)
+    i.board_led_flash_start                  0x00001ff4   Section        0  board_led.o(i.board_led_flash_start)
+    i.board_led_flash_stop                   0x0000201c   Section        0  board_led.o(i.board_led_flash_stop)
+    i.board_led_forelight_set                0x00002040   Section        0  board_led.o(i.board_led_forelight_set)
+    i.board_led_init                         0x00002090   Section        0  board_led.o(i.board_led_init)
+    i.board_led_open                         0x0000209c   Section        0  board_led.o(i.board_led_open)
+    i.board_led_refresh                      0x00002104   Section        0  board_led.o(i.board_led_refresh)
+    i.board_led_rotate_start                 0x00002198   Section        0  board_led.o(i.board_led_rotate_start)
+    i.board_led_rotate_stop                  0x000021b8   Section        0  board_led.o(i.board_led_rotate_stop)
+    i.board_light_close                      0x000021d4   Section        0  board_light.o(i.board_light_close)
+    i.board_light_devinit                    0x00002238   Section        0  board_light.o(i.board_light_devinit)
+    i.board_light_init                       0x00002240   Section        0  board_light.o(i.board_light_init)
+    i.board_light_open                       0x000022f0   Section        0  board_light.o(i.board_light_open)
+    i.board_light_register                   0x00002354   Section        0  board_light.o(i.board_light_register)
+    i.board_rs485_init                       0x00002388   Section        0  board_rs485.o(i.board_rs485_init)
+    i.board_rs485_read                       0x000023e8   Section        0  board_rs485.o(i.board_rs485_read)
+    i.board_rs485_write_nbyte                0x00002438   Section        0  board_rs485.o(i.board_rs485_write_nbyte)
+    i.board_time_get                         0x00002484   Section        0  board_time.o(i.board_time_get)
+    i.board_time_init                        0x00002490   Section        0  board_time.o(i.board_time_init)
+    i.board_time_out_set                     0x000024a8   Section        0  board_time.o(i.board_time_out_set)
+    i.board_time_out_wait                    0x000024b4   Section        0  board_time.o(i.board_time_out_wait)
+    i.board_wdt_feed                         0x000024c0   Section        0  board_wdt.o(i.board_wdt_feed)
+    i.board_wdt_init                         0x000024c8   Section        0  board_wdt.o(i.board_wdt_init)
+    i.ch1_get                                0x000024d0   Section        0  board_key.o(i.ch1_get)
+    i.ch1_on                                 0x00002510   Section        0  board_key.o(i.ch1_on)
+    i.ch2_get                                0x0000252c   Section        0  board_key.o(i.ch2_get)
+    i.ch2_on                                 0x0000256c   Section        0  board_key.o(i.ch2_on)
+    i.ct16b0_enable                          0x00002588   Section        0  timer.o(i.ct16b0_enable)
+    i.ct16b0_pwn_init                        0x00002594   Section        0  timer.o(i.ct16b0_pwn_init)
+    i.ct16b0_reset                           0x000025e4   Section        0  timer.o(i.ct16b0_reset)
+    i.ct16b0_set_match                       0x000025f0   Section        0  timer.o(i.ct16b0_set_match)
+    i.ct16b1_enable                          0x00002648   Section        0  timer.o(i.ct16b1_enable)
+    i.ct16b1_timer_init                      0x00002654   Section        0  timer.o(i.ct16b1_timer_init)
+    i.delay_ms                               0x000026a8   Section        0  delay.o(i.delay_ms)
+    i.et6290_delay                           0x000026c8   Section        0  et6290.o(i.et6290_delay)
+    i.et6290_init                            0x000026d4   Section        0  et6290.o(i.et6290_init)
+    i.et6290_send_cmd                        0x0000274c   Section        0  et6290.o(i.et6290_send_cmd)
+    i.et6290a_send_cmd                       0x00002784   Section        0  et6290.o(i.et6290a_send_cmd)
+    i.et6290a_sendbyte                       0x000027c8   Section        0  et6290.o(i.et6290a_sendbyte)
+    i.et6290b_send_cmd                       0x00002820   Section        0  et6290.o(i.et6290b_send_cmd)
+    i.et6290b_sendbyte                       0x00002864   Section        0  et6290.o(i.et6290b_sendbyte)
+    i.gpio_clear_interrupt                   0x000028bc   Section        0  gpio.o(i.gpio_clear_interrupt)
+    i.gpio_enable_interrupt                  0x000028d4   Section        0  gpio.o(i.gpio_enable_interrupt)
+    i.gpio_get_bitval                        0x000028ec   Section        0  gpio.o(i.gpio_get_bitval)
+    i.gpio_get_intstatus                     0x00002908   Section        0  gpio.o(i.gpio_get_intstatus)
+    i.gpio_set_bitval                        0x00002924   Section        0  gpio.o(i.gpio_set_bitval)
+    i.gpio_set_dir                           0x0000295a   Section        0  gpio.o(i.gpio_set_dir)
+    i.gpio_set_interrupt                     0x0000298c   Section        0  gpio.o(i.gpio_set_interrupt)
+    i.handler_delayms                        0x00002ae0   Section        0  board_time.o(i.handler_delayms)
+    i.handler_flash_led                      0x00002af8   Section        0  board_led.o(i.handler_flash_led)
+    i.handler_ir                             0x00002b58   Section        0  board_ir.o(i.handler_ir)
+    i.handler_ir_tick                        0x00002cf4   Section        0  board_ir.o(i.handler_ir_tick)
+    i.handler_irps_send                      0x00002d04   Section        0  board_ir.o(i.handler_irps_send)
+    i.handler_key_scan                       0x00002d54   Section        0  board_key.o(i.handler_key_scan)
+    i.handler_rotate_led                     0x00002dc8   Section        0  board_led.o(i.handler_rotate_led)
+    i.handler_rs485                          0x00002e94   Section        0  board_rs485.o(i.handler_rs485)
+    i.handler_rs485_idle                     0x00002f34   Section        0  board_rs485.o(i.handler_rs485_idle)
+    i.handler_systick                        0x00002f60   Section        0  board_time.o(i.handler_systick)
+    i.handler_timeout                        0x00002f7c   Section        0  board_time.o(i.handler_timeout)
+    i.iocon_u0_rxd_loc                       0x00002f94   Section        0  iocon.o(i.iocon_u0_rxd_loc)
+    i.main                                   0x00002fa0   Section        0  main.o(i.main)
+    i.okey_clear                             0x00002fce   Section        0  board_key.o(i.okey_clear)
+    i.okey_state_switch                      0x00002fd8   Section        0  board_key.o(i.okey_state_switch)
+    i.ramCopy                                0x0000308c   Section        0  iap.o(i.ramCopy)
+    i.sectorErase                            0x000030c8   Section        0  iap.o(i.sectorErase)
+    i.sectorPrepare                          0x00003100   Section        0  iap.o(i.sectorPrepare)
+    i.set_entry_clear                        0x0000312c   Section        0  sys.o(i.set_entry_clear)
+    set_entry_clear                          0x0000312d   Thumb Code    80  sys.o(i.set_entry_clear)
+    i.set_quit_clear                         0x00003184   Section        0  sys.o(i.set_quit_clear)
+    set_quit_clear                           0x00003185   Thumb Code    86  sys.o(i.set_quit_clear)
+    i.syscon_ahb_enable                      0x000031e4   Section        0  syscon.o(i.syscon_ahb_enable)
+    i.syscon_pd_on                           0x000031f8   Section        0  syscon.o(i.syscon_pd_on)
+    i.syscon_uart0_div                       0x00003208   Section        0  syscon.o(i.syscon_uart0_div)
+    i.syscon_wdt_clk_update                  0x00003214   Section        0  syscon.o(i.syscon_wdt_clk_update)
+    i.syscon_wdt_div                         0x0000322c   Section        0  syscon.o(i.syscon_wdt_div)
+    i.syscon_wdt_osc                         0x00003238   Section        0  syscon.o(i.syscon_wdt_osc)
+    i.systick_init                           0x00003248   Section        0  systick.o(i.systick_init)
+    i.uart0_init                             0x0000328c   Section        0  uart.o(i.uart0_init)
+    i.uart0_send_byte                        0x00003334   Section        0  uart.o(i.uart0_send_byte)
+    i.wdt_feed                               0x0000334c   Section        0  wdt.o(i.wdt_feed)
+    i.wdt_init                               0x00003360   Section        0  wdt.o(i.wdt_init)
+    .data                                    0x10000000   Section        4  system_lpc112x.o(.data)
+    .data                                    0x10000004   Section       14  network.o(.data)
+    net_frame_tx                             0x10000004   Data           8  network.o(.data)
+    net_frame_rx                             0x1000000c   Data           6  network.o(.data)
+    .data                                    0x10000012   Section       16  sys.o(.data)
+    RedColor                                 0x10000019   Data           3  sys.o(.data)
+    GreenColor                               0x1000001c   Data           3  sys.o(.data)
+    BlueColor                                0x1000001f   Data           3  sys.o(.data)
+    .data                                    0x10000022   Section       18  keycolor.o(.data)
+    .data                                    0x10000034   Section        4  scr_key.o(.data)
+    .data                                    0x10000038   Section        8  ps.o(.data)
+    .data                                    0x10000040   Section       38  board_ir.o(.data)
+    .data                                    0x10000068   Section        8  board_key.o(.data)
+    _board_keys                              0x10000068   Data           1  board_key.o(.data)
+    _key_ticks                               0x1000006c   Data           4  board_key.o(.data)
+    .data                                    0x10000070   Section       14  board_led.o(.data)
+    .data                                    0x10000080   Section       12  board_rs485.o(.data)
+    recv_sta                                 0x10000088   Data           1  board_rs485.o(.data)
+    recv_len                                 0x10000089   Data           1  board_rs485.o(.data)
+    rs485_recv_flag                          0x1000008a   Data           2  board_rs485.o(.data)
+    .data                                    0x1000008c   Section       16  board_time.o(.data)
+    _systick                                 0x1000008c   Data           4  board_time.o(.data)
+    _delayms_time                            0x10000090   Data           4  board_time.o(.data)
+    _timeout_time                            0x10000094   Data           4  board_time.o(.data)
+    .data                                    0x1000009c   Section        8  door.o(.data)
+    door                                     0x1000009c   Data           8  door.o(.data)
+    .data                                    0x100000a4   Section       22  i2cint.o(.data)
+    .data                                    0x100000bc   Section        4  iap.o(.data)
+    .bss                                     0x100000c0   Section      120  scr_key.o(.bss)
+    .bss                                     0x10000138   Section       96  conf_key.o(.bss)
+    .bss                                     0x10000198   Section       36  board_led.o(.bss)
+    .bss                                     0x100001bc   Section       32  board_light.o(.bss)
+    .bss                                     0x100001dc   Section      256  board_rs485.o(.bss)
+    recv_buf                                 0x100001dc   Data         128  board_rs485.o(.bss)
+    rs485_recv_buf                           0x1000025c   Data         128  board_rs485.o(.bss)
+    .bss                                     0x100002dc   Section       64  iap.o(.bss)
+    STACK                                    0x10000320   Section     1024  startup_lpc112x.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_lpc112x.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000d5   Thumb Code     8  startup_lpc112x.o(.text)
+    NMI_Handler                              0x000000dd   Thumb Code     2  startup_lpc112x.o(.text)
+    HardFault_Handler                        0x000000df   Thumb Code     2  startup_lpc112x.o(.text)
+    SVC_Handler                              0x000000e1   Thumb Code     2  startup_lpc112x.o(.text)
+    PendSV_Handler                           0x000000e3   Thumb Code     2  startup_lpc112x.o(.text)
+    ADC_A_IRQHandler                         0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    ADC_B_IRQHandler                         0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    BOD_IRQHandler                           0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    CT32B0_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    CT32B1_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    FLASH_IRQHandler                         0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    GPIO1_IRQHandler                         0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    GPIO2_IRQHandler                         0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    GPIO3_IRQHandler                         0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_0_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_10_IRQHandler                       0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_11_IRQHandler                       0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_1_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_2_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_3_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_4_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_5_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_6_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_7_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_8_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO0_9_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    PIO1_0_IRQHandler                        0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    SSP0_IRQHandler                          0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    SSP1_IRQHandler                          0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    UART1_IRQHandler                         0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    UART2_IRQHandler                         0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    WDT_IRQHandler                           0x000000e7   Thumb Code     0  startup_lpc112x.o(.text)
+    __aeabi_uidiv                            0x000000f1   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x000000f1   Thumb Code    44  uidiv.o(.text)
+    __aeabi_idiv                             0x0000011d   Thumb Code     0  idiv.o(.text)
+    __aeabi_idivmod                          0x0000011d   Thumb Code    40  idiv.o(.text)
+    __aeabi_memcpy                           0x00000145   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x00000145   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x00000145   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x00000169   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x00000169   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x00000169   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x00000177   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x00000177   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x00000177   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x0000017b   Thumb Code    18  memseta.o(.text)
+    __aeabi_dmul                             0x0000018d   Thumb Code   202  dmul.o(.text)
+    __aeabi_ui2d                             0x0000025d   Thumb Code    24  dfltui.o(.text)
+    __aeabi_d2uiz                            0x00000279   Thumb Code    50  dfixui.o(.text)
+    __aeabi_llsr                             0x000002b5   Thumb Code    34  llushr.o(.text)
+    _ll_ushift_r                             0x000002b5   Thumb Code     0  llushr.o(.text)
+    __I$use$fp                               0x000002d7   Thumb Code     0  iusefp.o(.text)
+    __scatterload                            0x000002d9   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002d9   Thumb Code     0  init.o(.text)
+    __aeabi_ddiv                             0x00000301   Thumb Code   234  ddiv.o(.text)
+    _double_round                            0x000003f1   Thumb Code    26  depilogue.o(.text)
+    _double_epilogue                         0x0000040b   Thumb Code   164  depilogue.o(.text)
+    __aeabi_llsl                             0x000004af   Thumb Code    32  llshl.o(.text)
+    _ll_shift_l                              0x000004af   Thumb Code     0  llshl.o(.text)
+    CT16B0_IRQHandler                        0x00000715   Thumb Code     2  interrupt.o(i.CT16B0_IRQHandler)
+    CT16B1_IRQHandler                        0x00000719   Thumb Code    30  interrupt.o(i.CT16B1_IRQHandler)
+    ConfKeyInit                              0x0000073d   Thumb Code    50  conf_key.o(i.ConfKeyInit)
+    ConfKeyStateSwitch                       0x00000775   Thumb Code    16  conf_key.o(i.ConfKeyStateSwitch)
+    DoorCloseFeedback                        0x00000785   Thumb Code    30  door.o(i.DoorCloseFeedback)
+    DoorGetSta                               0x000007a9   Thumb Code    22  door.o(i.DoorGetSta)
+    DoorHander                               0x000007c5   Thumb Code    24  door.o(i.DoorHander)
+    DoorInit                                 0x000007e1   Thumb Code    40  door.o(i.DoorInit)
+    DoorIsCanCheck                           0x00000815   Thumb Code    22  door.o(i.DoorIsCanCheck)
+    DoorOpenFeedback                         0x00000835   Thumb Code    30  door.o(i.DoorOpenFeedback)
+    DoorTask                                 0x00000859   Thumb Code    68  sys.o(i.DoorTask)
+    FlashReadData                            0x000008c5   Thumb Code    32  board_flash.o(i.FlashReadData)
+    FlashWriteData                           0x000008e5   Thumb Code    84  board_flash.o(i.FlashWriteData)
+    GPIO0_IRQHandler                         0x00000941   Thumb Code     8  interrupt.o(i.GPIO0_IRQHandler)
+    I2C_IRQHandler                           0x00000949   Thumb Code   540  i2cint.o(i.I2C_IRQHandler)
+    IrTask                                   0x00000b81   Thumb Code   306  sys.o(i.IrTask)
+    KeyColorInit                             0x00000cc5   Thumb Code    86  keycolor.o(i.KeyColorInit)
+    KeyTask                                  0x00000e19   Thumb Code    68  sys.o(i.KeyTask)
+    NetWorkAssocRun                          0x00001199   Thumb Code   114  sys.o(i.NetWorkAssocRun)
+    NetWorkTask                              0x00001281   Thumb Code   100  sys.o(i.NetWorkTask)
+    NetworkInit                              0x000012e5   Thumb Code    32  network.o(i.NetworkInit)
+    NetworkRecv                              0x00001309   Thumb Code    62  network.o(i.NetworkRecv)
+    NetworkSend                              0x0000134d   Thumb Code    20  network.o(i.NetworkSend)
+    PsHandler                                0x00001365   Thumb Code    20  ps.o(i.PsHandler)
+    PsInit                                   0x0000137d   Thumb Code    12  ps.o(i.PsInit)
+    PsOff                                    0x00001391   Thumb Code     8  ps.o(i.PsOff)
+    PsOn                                     0x00001399   Thumb Code     8  ps.o(i.PsOn)
+    PsReset                                  0x000013a1   Thumb Code     8  ps.o(i.PsReset)
+    PsSleep                                  0x000013b1   Thumb Code    30  ps.o(i.PsSleep)
+    PsTask                                   0x000013d5   Thumb Code    28  sys.o(i.PsTask)
+    PsWake                                   0x000013f5   Thumb Code    26  ps.o(i.PsWake)
+    ScrKeyAssocBackup                        0x00001545   Thumb Code    32  scr_key.o(i.ScrKeyAssocBackup)
+    ScrKeyAssocClear                         0x00001569   Thumb Code    22  scr_key.o(i.ScrKeyAssocClear)
+    ScrKeyAssocResum                         0x00001581   Thumb Code    32  scr_key.o(i.ScrKeyAssocResum)
+    ScrKeyClear                              0x000015a5   Thumb Code    50  scr_key.o(i.ScrKeyClear)
+    ScrKeyHaveOpen                           0x000015dd   Thumb Code    52  scr_key.o(i.ScrKeyHaveOpen)
+    ScrKeyInit                               0x00001615   Thumb Code   378  scr_key.o(i.ScrKeyInit)
+    ScrKeyMutexOther                         0x00001795   Thumb Code   118  scr_key.o(i.ScrKeyMutexOther)
+    ScrKeyProcess                            0x00001811   Thumb Code    88  scr_key.o(i.ScrKeyProcess)
+    ScrKeyResum                              0x00001869   Thumb Code    44  scr_key.o(i.ScrKeyResum)
+    ScrKeyStateClose                         0x00001899   Thumb Code    38  scr_key.o(i.ScrKeyStateClose)
+    ScrKeyStateNone                          0x000018bf   Thumb Code    32  scr_key.o(i.ScrKeyStateNone)
+    ScrKeyStateOpen                          0x000018e1   Thumb Code    58  scr_key.o(i.ScrKeyStateOpen)
+    ScrKeyStateSwitch                        0x00001925   Thumb Code    18  scr_key.o(i.ScrKeyStateSwitch)
+    SysInfoColorSave                         0x00001939   Thumb Code    20  sys.o(i.SysInfoColorSave)
+    SysInfoInit                              0x0000197d   Thumb Code    88  sys.o(i.SysInfoInit)
+    SysInfoIsMaster                          0x000019d9   Thumb Code     6  sys.o(i.SysInfoIsMaster)
+    SysInfoScrBitSave                        0x000019e5   Thumb Code    34  sys.o(i.SysInfoScrBitSave)
+    SysInfoSetMaster                         0x00001a0d   Thumb Code    20  sys.o(i.SysInfoSetMaster)
+    SysTick_Handler                          0x00001a25   Thumb Code    36  interrupt.o(i.SysTick_Handler)
+    SystemInit                               0x00001a49   Thumb Code   126  system_lpc112x.o(i.SystemInit)
+    UART0_IRQHandler                         0x00001ad1   Thumb Code     8  interrupt.o(i.UART0_IRQHandler)
+    WaitDelayHandler                         0x00001ad9   Thumb Code    20  scr_key.o(i.WaitDelayHandler)
+    WaitTask                                 0x00001c31   Thumb Code    40  sys.o(i.WaitTask)
+    __ARM_clz                                0x00001c61   Thumb Code    46  depilogue.o(i.__ARM_clz)
+    __ARM_common_switch8                     0x00001c8f   Thumb Code    28  system_lpc112x.o(i.__ARM_common_switch8)
+    __scatterload_copy                       0x00001cab   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00001cb9   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00001cbb   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    board_ir_clean                           0x00001cc9   Thumb Code     8  board_ir.o(i.board_ir_clean)
+    board_ir_get                             0x00001cd5   Thumb Code    12  board_ir.o(i.board_ir_get)
+    board_ir_init                            0x00001ce5   Thumb Code    68  board_ir.o(i.board_ir_init)
+    board_irps_disable                       0x00001d31   Thumb Code    12  board_ir.o(i.board_irps_disable)
+    board_irps_enable                        0x00001d3d   Thumb Code    12  board_ir.o(i.board_irps_enable)
+    board_irps_get                           0x00001d49   Thumb Code    28  board_ir.o(i.board_irps_get)
+    board_irps_init                          0x00001d6d   Thumb Code    20  board_ir.o(i.board_irps_init)
+    board_irps_start                         0x00001d85   Thumb Code     8  board_ir.o(i.board_irps_start)
+    board_irps_stop                          0x00001d91   Thumb Code    18  board_ir.o(i.board_irps_stop)
+    board_key_free_wait                      0x00001dad   Thumb Code    32  board_key.o(i.board_key_free_wait)
+    board_key_init                           0x00001dcd   Thumb Code    94  board_key.o(i.board_key_init)
+    board_key_scan                           0x00001e39   Thumb Code     6  board_key.o(i.board_key_scan)
+    board_led_backlight_set                  0x00001e45   Thumb Code    74  board_led.o(i.board_led_backlight_set)
+    board_led_close                          0x00001e95   Thumb Code    96  board_led.o(i.board_led_close)
+    board_led_display                        0x00001efd   Thumb Code   188  board_led.o(i.board_led_display)
+    board_led_display_dis                    0x00001fbd   Thumb Code     8  board_led.o(i.board_led_display_dis)
+    board_led_display_en                     0x00001fc9   Thumb Code     8  board_led.o(i.board_led_display_en)
+    board_led_flash_add                      0x00001fd5   Thumb Code    12  board_led.o(i.board_led_flash_add)
+    board_led_flash_del                      0x00001fe5   Thumb Code    12  board_led.o(i.board_led_flash_del)
+    board_led_flash_start                    0x00001ff5   Thumb Code    28  board_led.o(i.board_led_flash_start)
+    board_led_flash_stop                     0x0000201d   Thumb Code    24  board_led.o(i.board_led_flash_stop)
+    board_led_forelight_set                  0x00002041   Thumb Code    74  board_led.o(i.board_led_forelight_set)
+    board_led_init                           0x00002091   Thumb Code    12  board_led.o(i.board_led_init)
+    board_led_open                           0x0000209d   Thumb Code    96  board_led.o(i.board_led_open)
+    board_led_refresh                        0x00002105   Thumb Code   136  board_led.o(i.board_led_refresh)
+    board_led_rotate_start                   0x00002199   Thumb Code    22  board_led.o(i.board_led_rotate_start)
+    board_led_rotate_stop                    0x000021b9   Thumb Code    20  board_led.o(i.board_led_rotate_stop)
+    board_light_close                        0x000021d5   Thumb Code    92  board_light.o(i.board_light_close)
+    board_light_devinit                      0x00002239   Thumb Code     8  board_light.o(i.board_light_devinit)
+    board_light_init                         0x00002241   Thumb Code   158  board_light.o(i.board_light_init)
+    board_light_open                         0x000022f1   Thumb Code    92  board_light.o(i.board_light_open)
+    board_light_register                     0x00002355   Thumb Code    46  board_light.o(i.board_light_register)
+    board_rs485_init                         0x00002389   Thumb Code    82  board_rs485.o(i.board_rs485_init)
+    board_rs485_read                         0x000023e9   Thumb Code    70  board_rs485.o(i.board_rs485_read)
+    board_rs485_write_nbyte                  0x00002439   Thumb Code    72  board_rs485.o(i.board_rs485_write_nbyte)
+    board_time_get                           0x00002485   Thumb Code     6  board_time.o(i.board_time_get)
+    board_time_init                          0x00002491   Thumb Code    18  board_time.o(i.board_time_init)
+    board_time_out_set                       0x000024a9   Thumb Code     6  board_time.o(i.board_time_out_set)
+    board_time_out_wait                      0x000024b5   Thumb Code     6  board_time.o(i.board_time_out_wait)
+    board_wdt_feed                           0x000024c1   Thumb Code     8  board_wdt.o(i.board_wdt_feed)
+    board_wdt_init                           0x000024c9   Thumb Code     8  board_wdt.o(i.board_wdt_init)
+    ch1_get                                  0x000024d1   Thumb Code    56  board_key.o(i.ch1_get)
+    ch1_on                                   0x00002511   Thumb Code    24  board_key.o(i.ch1_on)
+    ch2_get                                  0x0000252d   Thumb Code    56  board_key.o(i.ch2_get)
+    ch2_on                                   0x0000256d   Thumb Code    24  board_key.o(i.ch2_on)
+    ct16b0_enable                            0x00002589   Thumb Code     8  timer.o(i.ct16b0_enable)
+    ct16b0_pwn_init                          0x00002595   Thumb Code    66  timer.o(i.ct16b0_pwn_init)
+    ct16b0_reset                             0x000025e5   Thumb Code     8  timer.o(i.ct16b0_reset)
+    ct16b0_set_match                         0x000025f1   Thumb Code    84  timer.o(i.ct16b0_set_match)
+    ct16b1_enable                            0x00002649   Thumb Code     8  timer.o(i.ct16b1_enable)
+    ct16b1_timer_init                        0x00002655   Thumb Code    76  timer.o(i.ct16b1_timer_init)
+    delay_ms                                 0x000026a9   Thumb Code    26  delay.o(i.delay_ms)
+    et6290_delay                             0x000026c9   Thumb Code    12  et6290.o(i.et6290_delay)
+    et6290_init                              0x000026d5   Thumb Code   106  et6290.o(i.et6290_init)
+    et6290_send_cmd                          0x0000274d   Thumb Code    54  et6290.o(i.et6290_send_cmd)
+    et6290a_send_cmd                         0x00002785   Thumb Code    62  et6290.o(i.et6290a_send_cmd)
+    et6290a_sendbyte                         0x000027c9   Thumb Code    82  et6290.o(i.et6290a_sendbyte)
+    et6290b_send_cmd                         0x00002821   Thumb Code    62  et6290.o(i.et6290b_send_cmd)
+    et6290b_sendbyte                         0x00002865   Thumb Code    82  et6290.o(i.et6290b_sendbyte)
+    gpio_clear_interrupt                     0x000028bd   Thumb Code    24  gpio.o(i.gpio_clear_interrupt)
+    gpio_enable_interrupt                    0x000028d5   Thumb Code    24  gpio.o(i.gpio_enable_interrupt)
+    gpio_get_bitval                          0x000028ed   Thumb Code    28  gpio.o(i.gpio_get_bitval)
+    gpio_get_intstatus                       0x00002909   Thumb Code    28  gpio.o(i.gpio_get_intstatus)
+    gpio_set_bitval                          0x00002925   Thumb Code    54  gpio.o(i.gpio_set_bitval)
+    gpio_set_dir                             0x0000295b   Thumb Code    50  gpio.o(i.gpio_set_dir)
+    gpio_set_interrupt                       0x0000298d   Thumb Code   340  gpio.o(i.gpio_set_interrupt)
+    handler_delayms                          0x00002ae1   Thumb Code    20  board_time.o(i.handler_delayms)
+    handler_flash_led                        0x00002af9   Thumb Code    84  board_led.o(i.handler_flash_led)
+    handler_ir                               0x00002b59   Thumb Code   378  board_ir.o(i.handler_ir)
+    handler_ir_tick                          0x00002cf5   Thumb Code    12  board_ir.o(i.handler_ir_tick)
+    handler_irps_send                        0x00002d05   Thumb Code    72  board_ir.o(i.handler_irps_send)
+    handler_key_scan                         0x00002d55   Thumb Code   108  board_key.o(i.handler_key_scan)
+    handler_rotate_led                       0x00002dc9   Thumb Code   190  board_led.o(i.handler_rotate_led)
+    handler_rs485                            0x00002e95   Thumb Code   128  board_rs485.o(i.handler_rs485)
+    handler_rs485_idle                       0x00002f35   Thumb Code    36  board_rs485.o(i.handler_rs485_idle)
+    handler_systick                          0x00002f61   Thumb Code    22  board_time.o(i.handler_systick)
+    handler_timeout                          0x00002f7d   Thumb Code    20  board_time.o(i.handler_timeout)
+    iocon_u0_rxd_loc                         0x00002f95   Thumb Code     8  iocon.o(i.iocon_u0_rxd_loc)
+    main                                     0x00002fa1   Thumb Code    46  main.o(i.main)
+    okey_clear                               0x00002fcf   Thumb Code    10  board_key.o(i.okey_clear)
+    okey_state_switch                        0x00002fd9   Thumb Code   174  board_key.o(i.okey_state_switch)
+    ramCopy                                  0x0000308d   Thumb Code    42  iap.o(i.ramCopy)
+    sectorErase                              0x000030c9   Thumb Code    38  iap.o(i.sectorErase)
+    sectorPrepare                            0x00003101   Thumb Code    32  iap.o(i.sectorPrepare)
+    syscon_ahb_enable                        0x000031e5   Thumb Code    16  syscon.o(i.syscon_ahb_enable)
+    syscon_pd_on                             0x000031f9   Thumb Code    12  syscon.o(i.syscon_pd_on)
+    syscon_uart0_div                         0x00003209   Thumb Code     6  syscon.o(i.syscon_uart0_div)
+    syscon_wdt_clk_update                    0x00003215   Thumb Code    20  syscon.o(i.syscon_wdt_clk_update)
+    syscon_wdt_div                           0x0000322d   Thumb Code     6  syscon.o(i.syscon_wdt_div)
+    syscon_wdt_osc                           0x00003239   Thumb Code    10  syscon.o(i.syscon_wdt_osc)
+    systick_init                             0x00003249   Thumb Code    54  systick.o(i.systick_init)
+    uart0_init                               0x0000328d   Thumb Code   150  uart.o(i.uart0_init)
+    uart0_send_byte                          0x00003335   Thumb Code    20  uart.o(i.uart0_send_byte)
+    wdt_feed                                 0x0000334d   Thumb Code    16  wdt.o(i.wdt_feed)
+    wdt_init                                 0x00003361   Thumb Code    46  wdt.o(i.wdt_init)
+    Region$$Table$$Base                      0x00003398   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000033b8   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x10000000   Data           4  system_lpc112x.o(.data)
+    g_sys_info                               0x10000012   Data           7  sys.o(.data)
+    fore_color                               0x10000022   Data           9  keycolor.o(.data)
+    back_color                               0x1000002b   Data           9  keycolor.o(.data)
+    WaitDelayTick                            0x10000034   Data           4  scr_key.o(.data)
+    g_ps                                     0x10000038   Data           8  ps.o(.data)
+    _irps_flag                               0x10000040   Data           1  board_ir.o(.data)
+    _irps_run_tick                           0x10000044   Data           4  board_ir.o(.data)
+    _irps_recv_count                         0x10000048   Data           1  board_ir.o(.data)
+    ir_val                                   0x10000049   Data           1  board_ir.o(.data)
+    _ir_tick                                 0x1000004c   Data           4  board_ir.o(.data)
+    ircode                                   0x10000050   Data           4  board_ir.o(.data)
+    htime                                    0x10000054   Data           4  board_ir.o(.data)
+    ltime                                    0x10000058   Data           4  board_ir.o(.data)
+    ir_cnt                                   0x1000005c   Data           1  board_ir.o(.data)
+    ir_code                                  0x10000060   Data           4  board_ir.o(.data)
+    _irps_state                              0x10000064   Data           1  board_ir.o(.data)
+    ir_state                                 0x10000065   Data           1  board_ir.o(.data)
+    _led_flash_flag                          0x10000070   Data           1  board_led.o(.data)
+    _led_rotate_flag                         0x10000071   Data           1  board_led.o(.data)
+    _flash_leds                              0x10000072   Data           1  board_led.o(.data)
+    _led_flash_tick                          0x10000074   Data           4  board_led.o(.data)
+    _led_rotate_tick                         0x10000078   Data           4  board_led.o(.data)
+    _display_leds                            0x1000007c   Data           1  board_led.o(.data)
+    _display_flag                            0x1000007d   Data           1  board_led.o(.data)
+    _rs485_idle_flag                         0x10000080   Data           1  board_rs485.o(.data)
+    _rs485_idle_tick                         0x10000084   Data           4  board_rs485.o(.data)
+    lightsensor_tick                         0x10000098   Data           4  board_time.o(.data)
+    I2C_sla                                  0x100000a4   Data           1  i2cint.o(.data)
+    I2C_suba                                 0x100000a8   Data           4  i2cint.o(.data)
+    I2C_suba_num                             0x100000ac   Data           1  i2cint.o(.data)
+    I2C_buf                                  0x100000b0   Data           4  i2cint.o(.data)
+    I2C_num                                  0x100000b4   Data           4  i2cint.o(.data)
+    I2C_end                                  0x100000b8   Data           1  i2cint.o(.data)
+    I2C_suba_en                              0x100000b9   Data           1  i2cint.o(.data)
+    IAP_Entry                                0x100000bc   Data           4  iap.o(.data)
+    g_scr_key                                0x100000c0   Data         120  scr_key.o(.bss)
+    conf_key                                 0x10000138   Data          96  conf_key.o(.bss)
+    _led_back_color                          0x10000198   Data          18  board_led.o(.bss)
+    _led_fore_color                          0x100001aa   Data          18  board_led.o(.bss)
+    _light_array                             0x100001bc   Data          32  board_light.o(.bss)
+    paramin                                  0x100002dc   Data          32  iap.o(.bss)
+    paramout                                 0x100002fc   Data          32  iap.o(.bss)
+    __initial_sp                             0x10000720   Data           0  startup_lpc112x.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00003478, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000033b8, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000c0   Data   RO          158    RESET               startup_lpc112x.o
+    0x000000c0   0x00000000   Code   RO         2015  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x00000004   Code   RO         2036    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x00000004   Code   RO         2039    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x00000000   Code   RO         2041    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x00000000   Code   RO         2043    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x00000008   Code   RO         2044    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x00000000   Code   RO         2046    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x00000000   Code   RO         2048    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x00000004   Code   RO         2037    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x0000001c   Code   RO          160    .text               startup_lpc112x.o
+    0x000000f0   0x0000002c   Code   RO         2018    .text               mc_p.l(uidiv.o)
+    0x0000011c   0x00000028   Code   RO         2020    .text               mc_p.l(idiv.o)
+    0x00000144   0x00000024   Code   RO         2022    .text               mc_p.l(memcpya.o)
+    0x00000168   0x00000024   Code   RO         2024    .text               mc_p.l(memseta.o)
+    0x0000018c   0x000000d0   Code   RO         2028    .text               mf_p.l(dmul.o)
+    0x0000025c   0x0000001c   Code   RO         2032    .text               mf_p.l(dfltui.o)
+    0x00000278   0x0000003c   Code   RO         2034    .text               mf_p.l(dfixui.o)
+    0x000002b4   0x00000022   Code   RO         2050    .text               mc_p.l(llushr.o)
+    0x000002d6   0x00000000   Code   RO         2052    .text               mc_p.l(iusefp.o)
+    0x000002d6   0x00000002   PAD
+    0x000002d8   0x00000024   Code   RO         2057    .text               mc_p.l(init.o)
+    0x000002fc   0x00000004   Code   RO          159    .ARM.__at_0x02FC    startup_lpc112x.o
+    0x00000300   0x000000f0   Code   RO         2030    .text               mf_p.l(ddiv.o)
+    0x000003f0   0x000000be   Code   RO         2053    .text               mf_p.l(depilogue.o)
+    0x000004ae   0x00000020   Code   RO         2059    .text               mc_p.l(llshl.o)
+    0x000004ce   0x00000002   PAD
+    0x000004d0   0x00000040   Code   RO          275    i.AssocMainkeyCreate  sys.o
+    0x00000510   0x0000001a   Code   RO          481    i.AssocRun          scr_key.o
+    0x0000052a   0x00000002   PAD
+    0x0000052c   0x00000170   Code   RO          276    i.AssocSet          sys.o
+    0x0000069c   0x0000003c   Code   RO          277    i.AssocStoreDel     sys.o
+    0x000006d8   0x0000003c   Code   RO          278    i.AssocStoreSave    sys.o
+    0x00000714   0x00000002   Code   RO          223    i.CT16B0_IRQHandler  interrupt.o
+    0x00000716   0x00000002   PAD
+    0x00000718   0x00000024   Code   RO          224    i.CT16B1_IRQHandler  interrupt.o
+    0x0000073c   0x00000038   Code   RO          597    i.ConfKeyInit       conf_key.o
+    0x00000774   0x00000010   Code   RO          598    i.ConfKeyStateSwitch  conf_key.o
+    0x00000784   0x00000024   Code   RO         1311    i.DoorCloseFeedback  door.o
+    0x000007a8   0x0000001c   Code   RO         1312    i.DoorGetSta        door.o
+    0x000007c4   0x0000001c   Code   RO         1313    i.DoorHander        door.o
+    0x000007e0   0x00000034   Code   RO         1314    i.DoorInit          door.o
+    0x00000814   0x00000020   Code   RO         1315    i.DoorIsCanCheck    door.o
+    0x00000834   0x00000024   Code   RO         1316    i.DoorOpenFeedback  door.o
+    0x00000858   0x00000044   Code   RO          279    i.DoorTask          sys.o
+    0x0000089c   0x00000028   Code   RO            3    i.DriverInit        main.o
+    0x000008c4   0x00000020   Code   RO         1363    i.FlashReadData     board_flash.o
+    0x000008e4   0x0000005c   Code   RO         1364    i.FlashWriteData    board_flash.o
+    0x00000940   0x00000008   Code   RO          225    i.GPIO0_IRQHandler  interrupt.o
+    0x00000948   0x00000238   Code   RO         1504    i.I2C_IRQHandler    i2cint.o
+    0x00000b80   0x00000144   Code   RO          280    i.IrTask            sys.o
+    0x00000cc4   0x00000064   Code   RO          455    i.KeyColorInit      keycolor.o
+    0x00000d28   0x000000f0   Code   RO          281    i.KeyColorSet       sys.o
+    0x00000e18   0x00000048   Code   RO          282    i.KeyTask           sys.o
+    0x00000e60   0x000000b0   Code   RO          283    i.LEDCheck          sys.o
+    0x00000f10   0x000000f8   Code   RO          284    i.MasterSet         sys.o
+    0x00001008   0x00000014   Code   RO         1709    i.NVIC_EnableIRQ    timer.o
+    0x0000101c   0x00000014   Code   RO         1868    i.NVIC_EnableIRQ    uart.o
+    0x00001030   0x00000078   Code   RO         1681    i.NVIC_SetPriority  systick.o
+    0x000010a8   0x00000078   Code   RO         1710    i.NVIC_SetPriority  timer.o
+    0x00001120   0x00000078   Code   RO         1869    i.NVIC_SetPriority  uart.o
+    0x00001198   0x00000078   Code   RO          285    i.NetWorkAssocRun   sys.o
+    0x00001210   0x00000070   Code   RO          286    i.NetWorkLoadRun    sys.o
+    0x00001280   0x00000064   Code   RO          287    i.NetWorkTask       sys.o
+    0x000012e4   0x00000024   Code   RO          168    i.NetworkInit       network.o
+    0x00001308   0x00000044   Code   RO          169    i.NetworkRecv       network.o
+    0x0000134c   0x00000018   Code   RO          170    i.NetworkSend       network.o
+    0x00001364   0x00000018   Code   RO          629    i.PsHandler         ps.o
+    0x0000137c   0x00000014   Code   RO          630    i.PsInit            ps.o
+    0x00001390   0x00000008   Code   RO          631    i.PsOff             ps.o
+    0x00001398   0x00000008   Code   RO          632    i.PsOn              ps.o
+    0x000013a0   0x00000010   Code   RO          633    i.PsReset           ps.o
+    0x000013b0   0x00000024   Code   RO          634    i.PsSleep           ps.o
+    0x000013d4   0x00000020   Code   RO          288    i.PsTask            sys.o
+    0x000013f4   0x00000020   Code   RO          635    i.PsWake            ps.o
+    0x00001414   0x00000130   Code   RO          289    i.ScrBitSet         sys.o
+    0x00001544   0x00000024   Code   RO          482    i.ScrKeyAssocBackup  scr_key.o
+    0x00001568   0x00000016   Code   RO          483    i.ScrKeyAssocClear  scr_key.o
+    0x0000157e   0x00000002   PAD
+    0x00001580   0x00000024   Code   RO          484    i.ScrKeyAssocResum  scr_key.o
+    0x000015a4   0x00000038   Code   RO          485    i.ScrKeyClear       scr_key.o
+    0x000015dc   0x00000038   Code   RO          486    i.ScrKeyHaveOpen    scr_key.o
+    0x00001614   0x00000180   Code   RO          487    i.ScrKeyInit        scr_key.o
+    0x00001794   0x0000007c   Code   RO          489    i.ScrKeyMutexOther  scr_key.o
+    0x00001810   0x00000058   Code   RO          490    i.ScrKeyProcess     scr_key.o
+    0x00001868   0x00000030   Code   RO          491    i.ScrKeyResum       scr_key.o
+    0x00001898   0x00000026   Code   RO          492    i.ScrKeyStateClose  scr_key.o
+    0x000018be   0x00000020   Code   RO          493    i.ScrKeyStateNone   scr_key.o
+    0x000018de   0x00000002   PAD
+    0x000018e0   0x00000044   Code   RO          494    i.ScrKeyStateOpen   scr_key.o
+    0x00001924   0x00000012   Code   RO          495    i.ScrKeyStateSwitch  scr_key.o
+    0x00001936   0x00000002   PAD
+    0x00001938   0x00000018   Code   RO          291    i.SysInfoColorSave  sys.o
+    0x00001950   0x0000002c   Code   RO          292    i.SysInfoDefault    sys.o
+    0x0000197c   0x0000005c   Code   RO          293    i.SysInfoInit       sys.o
+    0x000019d8   0x0000000c   Code   RO          294    i.SysInfoIsMaster   sys.o
+    0x000019e4   0x00000028   Code   RO          295    i.SysInfoScrBitSave  sys.o
+    0x00001a0c   0x00000018   Code   RO          296    i.SysInfoSetMaster  sys.o
+    0x00001a24   0x00000024   Code   RO          226    i.SysTick_Handler   interrupt.o
+    0x00001a48   0x00000088   Code   RO          125    i.SystemInit        system_lpc112x.o
+    0x00001ad0   0x00000008   Code   RO          227    i.UART0_IRQHandler  interrupt.o
+    0x00001ad8   0x00000018   Code   RO          496    i.WaitDelayHandler  scr_key.o
+    0x00001af0   0x0000011c   Code   RO          297    i.WaitIrQuit        sys.o
+    0x00001c0c   0x00000024   Code   RO          298    i.WaitNetQuit       sys.o
+    0x00001c30   0x00000030   Code   RO          299    i.WaitTask          sys.o
+    0x00001c60   0x0000002e   Code   RO         2055    i.__ARM_clz         mf_p.l(depilogue.o)
+    0x00001c8e   0x0000001c   Code   RO          148    i.__ARM_common_switch8  system_lpc112x.o
+    0x00001caa   0x0000000e   Code   RO         2063    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00001cb8   0x00000002   Code   RO         2064    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00001cba   0x0000000e   Code   RO         2065    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00001cc8   0x0000000c   Code   RO          750    i.board_ir_clean    board_ir.o
+    0x00001cd4   0x00000010   Code   RO          751    i.board_ir_get      board_ir.o
+    0x00001ce4   0x0000004c   Code   RO          752    i.board_ir_init     board_ir.o
+    0x00001d30   0x0000000c   Code   RO          754    i.board_irps_disable  board_ir.o
+    0x00001d3c   0x0000000c   Code   RO          755    i.board_irps_enable  board_ir.o
+    0x00001d48   0x00000024   Code   RO          756    i.board_irps_get    board_ir.o
+    0x00001d6c   0x00000018   Code   RO          757    i.board_irps_init   board_ir.o
+    0x00001d84   0x0000000c   Code   RO          758    i.board_irps_start  board_ir.o
+    0x00001d90   0x0000001c   Code   RO          759    i.board_irps_stop   board_ir.o
+    0x00001dac   0x00000020   Code   RO          848    i.board_key_free_wait  board_key.o
+    0x00001dcc   0x0000006c   Code   RO          849    i.board_key_init    board_key.o
+    0x00001e38   0x0000000c   Code   RO          850    i.board_key_scan    board_key.o
+    0x00001e44   0x00000050   Code   RO          955    i.board_led_backlight_set  board_led.o
+    0x00001e94   0x00000068   Code   RO          956    i.board_led_close   board_led.o
+    0x00001efc   0x000000c0   Code   RO          957    i.board_led_display  board_led.o
+    0x00001fbc   0x0000000c   Code   RO          958    i.board_led_display_dis  board_led.o
+    0x00001fc8   0x0000000c   Code   RO          959    i.board_led_display_en  board_led.o
+    0x00001fd4   0x00000010   Code   RO          960    i.board_led_flash_add  board_led.o
+    0x00001fe4   0x00000010   Code   RO          961    i.board_led_flash_del  board_led.o
+    0x00001ff4   0x00000028   Code   RO          963    i.board_led_flash_start  board_led.o
+    0x0000201c   0x00000024   Code   RO          964    i.board_led_flash_stop  board_led.o
+    0x00002040   0x00000050   Code   RO          966    i.board_led_forelight_set  board_led.o
+    0x00002090   0x0000000c   Code   RO          967    i.board_led_init    board_led.o
+    0x0000209c   0x00000068   Code   RO          968    i.board_led_open    board_led.o
+    0x00002104   0x00000094   Code   RO          969    i.board_led_refresh  board_led.o
+    0x00002198   0x00000020   Code   RO          970    i.board_led_rotate_start  board_led.o
+    0x000021b8   0x0000001c   Code   RO          971    i.board_led_rotate_stop  board_led.o
+    0x000021d4   0x00000064   Code   RO         1092    i.board_light_close  board_light.o
+    0x00002238   0x00000008   Code   RO         1093    i.board_light_devinit  board_light.o
+    0x00002240   0x000000b0   Code   RO         1094    i.board_light_init  board_light.o
+    0x000022f0   0x00000064   Code   RO         1095    i.board_light_open  board_light.o
+    0x00002354   0x00000034   Code   RO         1096    i.board_light_register  board_light.o
+    0x00002388   0x00000060   Code   RO         1157    i.board_rs485_init  board_rs485.o
+    0x000023e8   0x00000050   Code   RO         1158    i.board_rs485_read  board_rs485.o
+    0x00002438   0x0000004c   Code   RO         1159    i.board_rs485_write_nbyte  board_rs485.o
+    0x00002484   0x0000000c   Code   RO         1213    i.board_time_get    board_time.o
+    0x00002490   0x00000018   Code   RO         1214    i.board_time_init   board_time.o
+    0x000024a8   0x0000000c   Code   RO         1215    i.board_time_out_set  board_time.o
+    0x000024b4   0x0000000c   Code   RO         1216    i.board_time_out_wait  board_time.o
+    0x000024c0   0x00000008   Code   RO         1282    i.board_wdt_feed    board_wdt.o
+    0x000024c8   0x00000008   Code   RO         1283    i.board_wdt_init    board_wdt.o
+    0x000024d0   0x00000040   Code   RO          851    i.ch1_get           board_key.o
+    0x00002510   0x0000001c   Code   RO          852    i.ch1_on            board_key.o
+    0x0000252c   0x00000040   Code   RO          853    i.ch2_get           board_key.o
+    0x0000256c   0x0000001c   Code   RO          854    i.ch2_on            board_key.o
+    0x00002588   0x0000000c   Code   RO         1712    i.ct16b0_enable     timer.o
+    0x00002594   0x00000050   Code   RO         1713    i.ct16b0_pwn_init   timer.o
+    0x000025e4   0x0000000c   Code   RO         1714    i.ct16b0_reset      timer.o
+    0x000025f0   0x00000058   Code   RO         1715    i.ct16b0_set_match  timer.o
+    0x00002648   0x0000000c   Code   RO         1718    i.ct16b1_enable     timer.o
+    0x00002654   0x00000054   Code   RO         1721    i.ct16b1_timer_init  timer.o
+    0x000026a8   0x00000020   Code   RO          203    i.delay_ms          delay.o
+    0x000026c8   0x0000000c   Code   RO          691    i.et6290_delay      et6290.o
+    0x000026d4   0x00000078   Code   RO          692    i.et6290_init       et6290.o
+    0x0000274c   0x00000036   Code   RO          693    i.et6290_send_cmd   et6290.o
+    0x00002782   0x00000002   PAD
+    0x00002784   0x00000044   Code   RO          694    i.et6290a_send_cmd  et6290.o
+    0x000027c8   0x00000058   Code   RO          695    i.et6290a_sendbyte  et6290.o
+    0x00002820   0x00000044   Code   RO          696    i.et6290b_send_cmd  et6290.o
+    0x00002864   0x00000058   Code   RO          697    i.et6290b_sendbyte  et6290.o
+    0x000028bc   0x00000018   Code   RO         1396    i.gpio_clear_interrupt  gpio.o
+    0x000028d4   0x00000018   Code   RO         1397    i.gpio_enable_interrupt  gpio.o
+    0x000028ec   0x0000001c   Code   RO         1398    i.gpio_get_bitval   gpio.o
+    0x00002908   0x0000001c   Code   RO         1399    i.gpio_get_intstatus  gpio.o
+    0x00002924   0x00000036   Code   RO         1400    i.gpio_set_bitval   gpio.o
+    0x0000295a   0x00000032   Code   RO         1401    i.gpio_set_dir      gpio.o
+    0x0000298c   0x00000154   Code   RO         1402    i.gpio_set_interrupt  gpio.o
+    0x00002ae0   0x00000018   Code   RO         1217    i.handler_delayms   board_time.o
+    0x00002af8   0x00000060   Code   RO          972    i.handler_flash_led  board_led.o
+    0x00002b58   0x0000019c   Code   RO          760    i.handler_ir        board_ir.o
+    0x00002cf4   0x00000010   Code   RO          761    i.handler_ir_tick   board_ir.o
+    0x00002d04   0x00000050   Code   RO          762    i.handler_irps_send  board_ir.o
+    0x00002d54   0x00000074   Code   RO          855    i.handler_key_scan  board_key.o
+    0x00002dc8   0x000000cc   Code   RO          973    i.handler_rotate_led  board_led.o
+    0x00002e94   0x000000a0   Code   RO         1160    i.handler_rs485     board_rs485.o
+    0x00002f34   0x0000002c   Code   RO         1161    i.handler_rs485_idle  board_rs485.o
+    0x00002f60   0x0000001c   Code   RO         1218    i.handler_systick   board_time.o
+    0x00002f7c   0x00000018   Code   RO         1219    i.handler_timeout   board_time.o
+    0x00002f94   0x0000000c   Code   RO         1557    i.iocon_u0_rxd_loc  iocon.o
+    0x00002fa0   0x0000002e   Code   RO            5    i.main              main.o
+    0x00002fce   0x0000000a   Code   RO          858    i.okey_clear        board_key.o
+    0x00002fd8   0x000000b4   Code   RO          860    i.okey_state_switch  board_key.o
+    0x0000308c   0x0000003c   Code   RO         1958    i.ramCopy           iap.o
+    0x000030c8   0x00000038   Code   RO         1959    i.sectorErase       iap.o
+    0x00003100   0x0000002c   Code   RO         1960    i.sectorPrepare     iap.o
+    0x0000312c   0x00000058   Code   RO          300    i.set_entry_clear   sys.o
+    0x00003184   0x00000060   Code   RO          301    i.set_quit_clear    sys.o
+    0x000031e4   0x00000014   Code   RO         1578    i.syscon_ahb_enable  syscon.o
+    0x000031f8   0x00000010   Code   RO         1583    i.syscon_pd_on      syscon.o
+    0x00003208   0x0000000c   Code   RO         1588    i.syscon_uart0_div  syscon.o
+    0x00003214   0x00000018   Code   RO         1589    i.syscon_wdt_clk_update  syscon.o
+    0x0000322c   0x0000000c   Code   RO         1590    i.syscon_wdt_div    syscon.o
+    0x00003238   0x00000010   Code   RO         1591    i.syscon_wdt_osc    syscon.o
+    0x00003248   0x00000044   Code   RO         1682    i.systick_init      systick.o
+    0x0000328c   0x000000a8   Code   RO         1870    i.uart0_init        uart.o
+    0x00003334   0x00000018   Code   RO         1872    i.uart0_send_byte   uart.o
+    0x0000334c   0x00000014   Code   RO         1928    i.wdt_feed          wdt.o
+    0x00003360   0x00000038   Code   RO         1929    i.wdt_init          wdt.o
+    0x00003398   0x00000020   Data   RO         2061    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x00000720, Max: 0x00002000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10000000   0x00000004   Data   RW          126    .data               system_lpc112x.o
+    0x10000004   0x0000000e   Data   RW          171    .data               network.o
+    0x10000012   0x00000010   Data   RW          302    .data               sys.o
+    0x10000022   0x00000012   Data   RW          456    .data               keycolor.o
+    0x10000034   0x00000004   Data   RW          498    .data               scr_key.o
+    0x10000038   0x00000008   Data   RW          636    .data               ps.o
+    0x10000040   0x00000026   Data   RW          763    .data               board_ir.o
+    0x10000066   0x00000002   PAD
+    0x10000068   0x00000008   Data   RW          863    .data               board_key.o
+    0x10000070   0x0000000e   Data   RW          975    .data               board_led.o
+    0x1000007e   0x00000002   PAD
+    0x10000080   0x0000000c   Data   RW         1164    .data               board_rs485.o
+    0x1000008c   0x00000010   Data   RW         1220    .data               board_time.o
+    0x1000009c   0x00000008   Data   RW         1317    .data               door.o
+    0x100000a4   0x00000016   Data   RW         1510    .data               i2cint.o
+    0x100000ba   0x00000002   PAD
+    0x100000bc   0x00000004   Data   RW         1962    .data               iap.o
+    0x100000c0   0x00000078   Zero   RW          497    .bss                scr_key.o
+    0x10000138   0x00000060   Zero   RW          599    .bss                conf_key.o
+    0x10000198   0x00000024   Zero   RW          974    .bss                board_led.o
+    0x100001bc   0x00000020   Zero   RW         1100    .bss                board_light.o
+    0x100001dc   0x00000100   Zero   RW         1163    .bss                board_rs485.o
+    0x100002dc   0x00000040   Zero   RW         1961    .bss                iap.o
+    0x1000031c   0x00000004   PAD
+    0x10000320   0x00000400   Zero   RW          156    STACK               startup_lpc112x.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       124          8          0          0          0       1325   board_flash.o
+       736         88          0         38          0      12180   board_ir.o
+       642         66          0          8          0       5322   board_key.o
+      1212        128          0         14         36       9288   board_led.o
+       436         40          0          0         32       3482   board_light.o
+       456         68          0         12        256       3753   board_rs485.o
+       136         38          0         16          0       3619   board_time.o
+        16          0          0          0          0        838   board_wdt.o
+        72          6          0          0         96       1866   conf_key.o
+        32          6          0          0          0        447   delay.o
+       212         44          0          8          0       2749   door.o
+       498         38          0          0          0       4887   et6290.o
+       548          8          0          0          0       3892   gpio.o
+       568         42          0         22          0       1445   i2cint.o
+       160         48          0          4         64       2149   iap.o
+        90          6          0          0          0       2862   interrupt.o
+        12          4          0          0          0        435   iocon.o
+       100         14          0         18          0       1203   keycolor.o
+        86          0          0          0          0      18464   main.o
+       128         14          0         14          0       2078   network.o
+       144         32          0          8          0       3264   ps.o
+      1056         58          0          4        120       8979   scr_key.o
+        32         12        192          0       1024        832   startup_lpc112x.o
+      3136        258          0         16          0      16710   sys.o
+       100         30          0          0          0       2564   syscon.o
+       164         10          0          4          0       1995   system_lpc112x.o
+       188         24          0          0          0       6699   systick.o
+       428         54          0          0          0       9104   timer.o
+       332         38          0          0          0       1851   uart.o
+        76         14          0          0          0        806   wdt.o
+
+    ----------------------------------------------------------------------
+     11932       1196        224        192       1632     135088   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        12          0          0          6          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        40          0          0          0          0         72   idiv.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        32          0          0          0          0         68   llshl.o
+        34          0          0          0          0         68   llushr.o
+        36          0          0          0          0         60   memcpya.o
+        36          0          0          0          0        100   memseta.o
+        44          0          0          0          0         72   uidiv.o
+       240          6          0          0          0         84   ddiv.o
+       236          0          0          0          0        216   depilogue.o
+        60         10          0          0          0         68   dfixui.o
+        28          4          0          0          0         68   dfltui.o
+       208          6          0          0          0         88   dmul.o
+
+    ----------------------------------------------------------------------
+      1084         42          0          0          0       1032   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       308         16          0          0          0        508   mc_p.l
+       772         26          0          0          0        524   mf_p.l
+
+    ----------------------------------------------------------------------
+      1084         42          0          0          0       1032   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     13016       1238        224        192       1632     128484   Grand Totals
+     13016       1238        224        192       1632     128484   ELF Image Totals
+     13016       1238        224        192          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                13240 (  12.93kB)
+    Total RW  Size (RW Data + ZI Data)              1824 (   1.78kB)
+    Total ROM Size (Code + RO Data + RW Data)      13432 (  13.12kB)
+
+==============================================================================
+
